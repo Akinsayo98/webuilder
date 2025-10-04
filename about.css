@@ -115,7 +115,7 @@ body {
     color: orangered;
 }
 #scrollHeader ul li:hover .chat{
-    color: black !important;
+    color: black;
     transition: 1s;
 }
 

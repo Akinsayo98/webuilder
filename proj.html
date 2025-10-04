@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Falling Letters — Service</title>
+<style>
+  :root{
+    --bg:#0f172a; 
+    --text:#fff;
+  }
+  html,body{
+    height:100%;
+    margin:0;
+    background:var(--bg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
+  }
+  h1{
+    color:var(--text);
+    font-size: clamp(2rem, 8vw, 6rem);
+    letter-spacing: .05em;
+    display:inline-block;
+    user-select:none;
+    -webkit-user-select:none;
+  }
+
+  .letter{
+    display:inline-block;
+    transform-origin:center;
+    will-change: transform, opacity;
+  }
+
+  @keyframes fall {
+    0%   { transform: translateY(0); opacity:1; }
+    100% { transform: translateY(120vh); opacity:0; }
+  }
+
+  .letter.falling{
+    animation-name: fall;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }
+</style>
+</head>
+<body>
+  <h1 id="title">SERVICE</h1>
+
+<script>
+  const title = document.getElementById('title');
+  const text = title.textContent.trim();
+  title.innerHTML = ''; 
+
+  for (let i = 0; i < text.length; i++) {
+    const span = document.createElement('span');
+    span.className = 'letter';
+    span.textContent = text[i];
+    title.appendChild(span);
+  }
+
+  // Start falling immediately on page load
+  window.addEventListener('load', () => {
+    const letters = title.querySelectorAll('.letter');
+    letters.forEach((el, idx) => {
+      const delay = idx * 0.2; // stagger each letter
+      const duration = 2;      // same duration for all
+      el.style.animationDelay = `${delay}s`;
+      el.style.animationDuration = `${duration}s`;
+      el.classList.add('falling');
+    });
+  });
+</script>
+</body>
+</html>

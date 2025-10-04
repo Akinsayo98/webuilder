@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeBuilder / Details</title>
+    <link rel="stylesheet" href="bootfiles/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="icon" href="logo2.png">
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Bauhaus 93', sans-serif;
+            user-select: none;
+        }
+        .contain{
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.homepic{
+    width: 20%;
+    height: 100px;
+    background-image: url("logo2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#scrollHeader .homepic{
+    width: 20%;
+    height: 100px;
+    background-image: url("logo-white.png");
+    background-repeat: no-repeat;
+    background-position: center center 
+}
+.contain header {
+  width: 100%;
+  height: fit-content;
+  padding: 0px 60px;
+  padding-bottom: 0px;
+  text-align: center;
+  z-index: 10000 !important;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+.other{
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 0px;
+}
+.other ul{
+    width: fit-content;
+    margin: 0;
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+.other ul li{
+    padding: 0px 20px;
+    margin: 0px 0px;
+    border: transparent;
+}
+.other ul li:nth-child(1){
+    margin: 0px 0px;
+}
+.other ul li a{
+    color: rgba(0, 0, 0, 0.843);
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+} 
+.other ul li a:hover{
+    text-decoration: none;
+    color: orange;
+}
+.other ul li:nth-child(5){
+    width: fit-content;
+    padding: 0px 0px;
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 0px 30px;
+    margin-right: 0px;
+    cursor: pointer;
+    transition:  background 0.3s linear;
+    
+}
+.other ul li:nth-child(5):hover{
+   background-color:orangered;
+}
+.other ul li .chat{
+   color: white;
+   transition: color 0.3s ease-in-out;
+   font-weight: 500;
+}
+.other ul li:hover .chat{
+    color: white;
+    transition: 1s;
+}
+#scrollHeader ul li a{
+    color: white;
+    font-size: 15px;
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+#scrollHeader ul li:hover a{
+    text-decoration: none;
+    color: orangered;
+}
+#scrollHeader ul li .hom{
+  color: orangered;
+}
+
+#scrollHeader ul li:hover .chat{
+    text-decoration: none;
+    color: white;
+}
+.contain .scroll-header {
+  background-color: rgb(7, 7, 70);
+  color: #333;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  padding: 20px 60px;
+  z-index: 500;
+  padding-bottom: 0px;
+}
+
+.scroll-header.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.about{
+  width: 100%;
+  padding: 80px 100px;
+  background: linear-gradient(to top,  rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.47)), url(colleagues.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  margin-top: 100px;
+}
+.about p{
+  color: white;
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 60px;
+}
+.content{
+  width: 100%;
+  height: fit-content;
+  padding: 80px 100px;
+  padding-bottom: 120px;
+}
+.image{
+  width: 100%;
+  height: 80vh;
+  background-image: url(details.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 40px;
+}
+.content h1{
+  color: rgb(7, 7, 70);
+  font-weight: bolder;
+  font-size: 32px;
+  margin: 20px 0px;
+}
+.fix{
+  width: 4%;
+  height:fit-content;
+  background-color:orange;
+  padding: 15px 0px;
+  position: fixed;
+  z-index: 10000;
+  right: 5%;
+  bottom: 0px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.055);
+  transition: all 0.3s ease-in-out;
+}
+.fix:hover{
+  background-color: orangered;
+}
+.fix p{
+  margin-bottom: 0px;
+  text-align: center;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+.fix:hover p{
+  color: black;
+}
+ /* footer  */
+footer{
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(7, 4, 4, 0.957);
+    padding: 100px 80px;
+    padding-bottom: 50px;
+}
+.wrap{
+    width: 100%;
+    height:fit-content;
+    display: flex;
+}
+.foot1, .foot2{
+    width: 50%;
+    height: fit-content;
+    display: flex;
+}
+.foot2{
+    background-color: transparent;
+}
+.inside, .inside2{
+    width: 65%;
+    height: fit-content;
+    padding: 0px 30px;
+    padding-left: 0px;
+}
+.inside2{
+    width: 35%;
+    padding: 0px 10px;
+    background-color: transparent;
+}
+.inside2 p{
+    font-size: 24px;
+    color: white;
+    margin-bottom: 38px;
+    font-weight: bold;
+    margin-top: 38px;
+}
+.inside .imgs{
+    width: 50%;
+    height: 10vh;
+    background-image: url(logo-white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 25px;
+}
+.inside p{
+    font-size: 13px;
+    font-weight: lighter;
+    color: ghostwhite;
+}
+footer a{
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    color: #7e7272;
+    text-decoration: none;
+    transition: transform 0.4s ease-in-out;
+    margin: 15px 0px;
+}
+footer a:hover{
+    color: orangered;
+    text-decoration: none;
+    transform: translateX(10px);
+}
+.inside3{
+    width: 60%;
+    height: fit-content;
+    padding: 15px 10px;
+    padding-bottom: 0px;
+}
+.inside4{
+    width: 40%;
+    height: 40vh;
+    padding: 15px 10px;
+    padding-bottom: 0px;
+}
+.inner-div{
+    width: 100%;
+    height: 40vh;
+    background-image: url(map-footer.png.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.inside3 p:nth-child(1){
+    font-size: 24px;
+    color: white;
+    margin-bottom: 38px;
+    font-weight: bold;
+    margin-top: 23px;
+}
+
+.foot1, .foot2{
+    width: 100%;
+}
+.last-text i{
+    color :gold;
+}
+.last-text{
+    font-size: 14px;
+    padding-top: 50px;
+}
+#oner{
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  z-index: 0;
+  top: 100px;
+  padding: 40px 80px;
+  padding-bottom: 40px;
+  background-color: orange;
+  list-style: none;
+  border-bottom-right-radius: 0px;
+}
+.menu-ul li{
+  cursor: pointer;
+  margin: 25px 0px;
+}
+.menu-ul li:nth-child(1){
+  margin-top: 0px;
+}
+
+.menu-ul li a{
+  font-size: 20px;
+  display: block;
+  font-weight: 600;
+  color: white;
+  transition: all 1s ease;
+  text-decoration: none;
+}
+#oner li a:hover{
+  transform: translateX(10px);
+}
+#navs{
+  font-size: 35px;
+  color: orange;
+  transition: color 0.5s ease-in-out;
+}
+#navs:hover{
+  color: orangered;
+}
+#oner li:nth-child(5){
+    width: fit-content;
+    padding: 0px 0px;
+    background-color:rgb(7, 7, 70);
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 0px 0px;
+    margin-right: 0px;
+    cursor: pointer;
+    transition:  background 0.3s linear;
+    
+}
+#oner li:nth-child(5):hover{
+   background-color: darkorange;
+}
+#oner li .chat{
+   color: white;
+   transition: color 0.3s ease-in-out;
+   font-weight: 500;
+}
+#oner li:hover .chat{
+    color: black;
+    transition: 1s;
+}
+
+
+/* media queries  */
+@media (min-width:1025px) {
+  #oner, #btn4{
+    display: none;
+  }
+}
+@media (max-width:1100px) {
+  .contain .homepic{
+    width: fit-content;
+    padding: 0px 110px;
+  }
+  .about{
+    padding: 160px 100px;
+    height: 60vh;
+  }
+}
+@media (max-width:1024px) {
+  .contain .homepic{
+    width: fit-content;
+    padding: 0px 110px;
+  }
+  .other{
+    display: none;
+  }
+  .about{
+    height: 60vh;
+  }
+  .about p{
+    margin-top: 100px;
+  }
+  .fix{
+    width: 6%;
+  }
+  .wrap{
+    display: block;
+  }
+}
+
+@media (max-width:990px){
+  .about{
+    margin-top: 0px;
+  }
+  #oner{
+    top: 70px;
+    padding: 40px 60px;
+  }
+  .inns2{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contain #scrollHeader{
+    padding: 10px 0px;
+  }
+  .contain #scrollHeader .homepic{
+    margin: 0px auto;
+    height: 5vh;
+    padding: 0px 0px;
+    width: 50%;
+    /* background-size: contain; */
+  }
+  .contain #mainHeader .homepic{
+    height: 5vh;
+    padding: 0px 0px;
+    width: 50%;
+    margin: 0px 0px;
+    /* background-size: contain; */
+  }
+  .contain #mainHeader{
+    display: grid;
+    padding: 10px 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about{
+    padding: 160px 100px;
+    height: 70vh;
+  }
+  #btn4{
+    width: fit-content;
+    display: grid;
+    justify-self: right;
+  }
+}
+
+@media (max-width:912px) {
+  .about p{
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: bolder;
+  }
+  .about{
+    height: 50vh;
+  }
+  .content{
+    padding: 80px 80px;
+  }
+}
+@media (max-width: 850px) {
+  .contain #mainHeader .homepic{
+    width: 60%;
+  }
+  #btn4{
+    margin-right: 30px;
+  }
+  .about{
+    padding: 120px 100px;
+  }
+  #oner{
+    padding: 40px 70px;
+  }
+  
+}
+@media (max-width:768px){
+  #oner{
+    width: 100%;
+    padding: 40px 55px;
+  }
+  .inns2{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contain #scrollHeader{
+    padding: 10px 0px;
+  }
+  .contain #scrollHeader .homepic{
+    margin: 0px auto;
+    height: 5vh;
+    padding: 0px 0px;
+    width: 50%;
+  }
+  .contain #mainHeader .homepic{
+    height: 5vh;
+    padding: 0px 0px;
+  }
+  .contain #mainHeader{
+    display: grid;
+    padding: 10px 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #btn4{
+    width: fit-content;
+    display: grid;
+    justify-self: right;
+    margin-right: 0px;
+  }
+  .content .image{
+    height: 60vh;
+  }
+}
+@media (max-width:700px) {
+ .contain #mainHeader .homepic{
+    height: 5vh;
+    padding: 0px 0px;
+    width: 75%;
+  } 
+}
+
+@media (max-width:600px){
+  .about p{
+    line-height: 40px;
+    font-size: 35px;
+  }
+  .content{
+    padding: 80px 40px;
+  }
+  .image{
+    width: 100%;
+    height: 60vh;
+  }
+  footer{
+    padding: 80px 40px;
+  }
+  .fix{
+    width: 10%;
+  }
+}
+@media (max-width:570px) {
+  .about{
+    padding: 80px 40px;
+  }
+  .contain #mainHeader .homepic{
+    width: 90%;
+  }
+}
+@media (max-width:500px) {
+  .about{
+    padding: 80px 40px;
+  }
+  .about p{
+    font-size: 30px;
+  }
+  .contain #mainHeader .homepic{
+    width: 100%;
+  }
+  .wrap .foot1, .foot2{
+    display: block;
+  }
+  .foot1 .inside, .foot1 .inside2, .inside3, .inside4{
+    width: 100%;
+  } 
+  .content .image{
+    height: 40vh;
+  }
+}
+@media (max-width:450px){
+  .about p{
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .about{
+    height: 40vh;
+    padding: 90px 40px;
+    padding-right: 0px;
+    /* margin-top: 140px; */
+  }
+  .fix{
+    width: 13%;
+  }
+  .content{
+    padding: 100px 40px;
+  }
+  .image{
+    width: 100%;
+    background-size: cover;
+    background-position: none;
+    height: 40vh;
+  }
+  footer{
+    padding-bottom: 20px;
+  }
+  #oner{
+    padding: 40px 40px;
+  }
+  .contain #mainHeader{
+      display: grid;
+      width: 100%;
+      padding: 10px 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0px;
+     }
+   .contain #mainHeader .homepic{
+    width: auto;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    background-size: contain;
+  }
+  .contain #scrollHeader .homepic{
+    background-size: contain;
+  }
+  .content{
+    padding: 120px 20px;
+  }
+  footer{
+    padding: 50px 20px;
+    padding-bottom: 15px;
+  }
+ 
+  footer .wrap .inside, .inside2{
+    padding: 0px 0px;
+  }
+  footer .wrap .inside p{
+    padding-right: 0px;
+  }
+
+  
+}
+@media (max-width:375px){
+  .about{
+    padding: 60px 30px;
+    height: 60vh;
+  }
+}
+@media (max-width:320px){
+  .about p{
+    font-size: 22px;
+    line-height: 30px;
+  }
+  #oner{
+    padding: 40px 20px;
+  }
+}
+@media (max-width: 320px) and (max-height: 1058px){
+  .about{
+    margin-top: 0px;
+    height: 40vh;
+  }
+
+}
+@media (max-width: 320px) and (max-height: 658px){
+  .about{
+    margin-top: 0px;
+    height: 50vh;
+  }
+
+}
+/* media queries  */
+</style>
+</head>
+<body>
+    <div class="contain">
+         <header class="main-header fixed-top" id="mainHeader">
+            <div class="homepic"></div>
+            <div class="other">
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="project.html">Projects</a></li>
+                  <li><a href="service.html">Services</a></li>
+                 <li><a class="chat" href="https://wa.me/+2348134891064?text=Hello,%20*WeBuilder*%20I%20am%20coming%20from%20your%20website,%20I%20Need%20Your%20Service.%20">Let's Chat</a></li>
+              </ul>
+            </div>
+            <button class="btn btn-dark" id="btn4" data-target="#oner" data-toggle="collapse">
+                <i class="fa fa-navicon" id="navs" aria-hidden="true"></i>
+              </button>
+        </header>
+
+        <header class="scroll-header fixed-top" id="scrollHeader">
+          <div class="homepic"></div>
+            <div class="other">
+              <ul>
+                <li><a href="index.html" class="hom">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="service.html">Services</a></li>
+               <li><a class="chat" href="https://wa.me/+2348134891064?text=Hello,%20*WeBuilder*%20I%20am%20coming%20from%20your%20website,%20I%20Need%20Your%20Service.%20">Let's Chat</a></li>
+            </ul>
+          </div>
+      </header>
+      <div class="">
+          <ul class="menu-ul collapse" id="oner">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a class="chat" href="https://wa.me/+2348134891064?text=Hello,%20*WeBuilder*%20I%20am%20coming%20from%20your%20website,%20I%20Need%20Your%20Service.%20">Let's Chat</a></li>
+          </ul>
+      </div>
+      
+      <div class="about">
+        <p>Engineering techniques & implementation</p>
+      </div>
+      <!-- content  -->
+       <div class="content">
+          <div class="image"></div>
+          <p>
+            Collaboration between engineers, architects, and builders ensures that every element fits together with purpose. 
+            Construction is not just about building walls;
+             it is about creating environments where people can live, work, and thrive.
+          </p>
+           <p>
+            Collaboration between engineers, architects, and builders ensures that every element fits together with purpose.
+            Construction is not just about building walls; it is about creating environments where people can live, work, and thrive.
+          </p>
+          <h1>How can we help?</h1>
+          <p>
+            We help by providing complete construction services — from design and planning to building and finishing.
+             Our team ensures quality,
+             safety, and efficiency, delivering strong and lasting structures tailored to your needs.
+          </p>
+          <p>
+            We can help by turning your ideas into strong, reliable structures. From the earliest planning stage to the 
+            final finishing touches, we provide complete construction solutions tailored to your needs.
+          </p>
+       </div>
+      <!-- content  -->
+
+      <!-- footer   -->
+         <footer class="">
+            <div class="wrap">
+               <div class="foot1">
+                  <div class="inside">
+                      <div class="imgs"></div>
+                      <p>If you want a construction company you can truly trust, we the one for you. We combined top-notch craftsmanship with genuine care for your needs.</p>
+                  </div>
+                  <div class="inside2">
+                      <p>Quick Links</p>
+                       <div class="inns2">
+                           <a href="index.html">Home</a>
+                           <a href="about.html">About</a>
+                           <a href="project.html">Projects</a>
+                           <a href="service.html">Services</a>
+                       </div>
+                  </div>
+               </div>
+               <div class="foot2">
+                  <div class="inside3">
+                    <p>Contact</p>
+                    <p>198 West 21th Street, Suite 721 New</p>
+                    <p>York,NY 10010</p>
+                    <a href="#">Phone: +95 (0) 123 456 789</a>
+                    <a href="#">Cell: +95 (0) 123 456 789</a>
+                  </div>
+                  <div class="inside4">
+                    <div class="inner-div"></div>
+                  </div>
+               </div>
+            </div>
+             <p class="last-text text-muted">Copyright ©2025 All rights reserved | This template is made with 
+              <i class="far fa-heart heart" aria-hidden="true"></i> by Akinsayo Bright</p> 
+         </footer>
+<!-- footer ends here  -->
+  <div class="fix" id="myDiv">
+    <p><i class="fa fa-arrow-up" aria-hidden="true" id="backHome"></i></a></p>
+  </div>
+    </div>
+<style>
+  .heart{
+    transition: color 0.4s linear;
+    cursor: pointer;
+  }
+  .heart:hover{
+    color: orangered;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // disappearing header 
+
+const mainHeader = document.getElementById('mainHeader');
+const scrollHeader = document.getElementById('scrollHeader');
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > 100) {
+    // Scrolling down
+    if (currentScroll > lastScrollY) {
+      mainHeader.style.transform = 'translateY(-100%)';
+      scrollHeader.classList.add('active');
+    } 
+    // Scrolling up
+    else {
+      if (currentScroll <= 150) {
+        mainHeader.style.transform = 'translateY(0)';
+        scrollHeader.classList.remove('active');
+      }
+    }
+  } else {
+    // Near top
+    mainHeader.style.transform = 'translateY(0)';
+    scrollHeader.classList.remove('active');
+  }
+
+  lastScrollY = currentScroll;
+});
+
+// disappearing header
+ document.getElementById("myDiv").addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+}); 
+    </script>
+    <script src="bootfiles/jquery-slim.min.js"></script>
+    <script src="bootfiles/popper.min.js"></script>
+    <script src="bootfiles/bootstrap.js"></script>
+</body>
+</html>

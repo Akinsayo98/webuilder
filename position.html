@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .nav{
+                width: calc(100% - 20px);
+                height: fit-content;
+                padding: 10px 10px;
+                background-color: black;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                position: relative;
+        }
+        h1{
+            color: white;
+        }
+        .wrap{
+            width: fit-content;
+            padding: 0px 0px;
+        }
+        .ul1{
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .ul1 li{
+            padding: 15px 20px;
+            cursor: pointer;
+            margin: 0px 15px;
+        }
+        .ul1 li:nth-child(1){
+            margin-left: 0px;
+        }
+         .ul1 li:nth-child(4){
+            margin-right: 0px;
+         }
+         .ul1 li a{
+            color: white;
+            text-decoration: none;
+            font-weight:600;
+            transition: color 1s ease-in-out;
+         }
+         .inner{
+            background-color: royalblue;
+            position: absolute;
+            width: 12%;
+            top: 55px;
+            display: none;
+         }
+         ul{
+            list-style: none;
+         }
+         .inner ul{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+         }
+         .inner ul li{
+            width: 100%;
+            padding: 15px 0px;
+            margin: 10px 0px;
+            cursor: pointer;
+            background-color: transparent;
+            transition: background 0.4s ease-in-out;
+         }
+         .inner li:hover{
+            background-color: orange;
+         }
+       .ul1 li .inner li:hover a{
+            color: black;
+         }
+         .inner ul li:first-child{
+            margin-top: 0px;
+         }
+         .inner ul li:nth-child(4){
+            margin-bottom: 0px;
+         }
+         .inner ul li a{
+            margin-left: 15px;
+            font-weight: 500;
+            color: white;
+            font-size: 15px;
+            transition: color 0.4s ease-in-out;
+         }
+         .ul1 li:hover a{
+            color: blue;
+         }
+        .ul1 li:hover .inner a{
+            color: white;
+         }
+         .ul1 li:hover .inner{
+            display: block;
+         }
+        .inner ul .phone{
+            width: 100%;
+            height: fit-content;
+            padding: 0px 0px;
+            position: absolute;
+            left: 162px;
+            top: 140px;
+            background-color: orange;
+            display: none;
+         }
+         .ul1 li:hover .inner li:hover .phone{
+            display: block;
+         }
+         #msg{
+            width: 100%;
+            height: fit-content;
+            position: absolute;
+            left: -162px;
+            top: 70px;
+            z-index: 10;
+         }
+         #msg ul li{
+            padding: 7px 0px;
+         }
+
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h1>Logo</h1>
+        <div class="wrap">
+            <ul class="ul1">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a>
+                    <div class="inner">
+                        <ul>
+                            <li><a href="">Feedbacks</a></li>
+                            <li><a href="">Message</a>
+                                <div class="phone" id="msg">
+                                    <ul>
+                                        <li><a href="">Send me a text</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="">Mobile</a>
+                                <div class="phone">
+                                    <ul>
+                                        <li><a href="">08134891074</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="">Call</a></li>
+                        </ul>
+                    </div>
+                    
+                </li>
+                <li><a href="">Services</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,745 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Bauhaus 93', sans-serif;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white; /* Blinking cursor */
+  width: 0;
+  margin: 80px auto;
+  margin-bottom: 0px;
+  animation: typing 5s steps(8, end) forwards, blink 0.7s infinite;
+  font-size: 3rem;
+}
+@keyframes typing {
+  from { width: 0;
+}
+  to { width: 8ch; } /* 12 characters in "Construction" */
+}
+@keyframes blink {
+   0%, 100% { border-color: transparent; }
+   50% { border-color: white; }
+}
+
+
+.contain{
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.homepic{
+    width: 20%;
+    height: 100px;
+    background-image: url("logo2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#scrollHeader .homepic{
+    width: 20%;
+    height: 100px;
+    background-image: url("logo-white.png");
+    background-repeat: no-repeat;
+    background-position: center center 
+}
+.contain header {
+  width: 100%;
+  height: fit-content;
+  padding: 0px 60px;
+  padding-bottom: 0px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+.other{
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 0px;
+}
+.other ul{
+    width: fit-content;
+    margin: 0;
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+.other ul li{
+    padding: 0px 20px;
+    margin: 0px 0px;
+    border: transparent;
+}
+.other ul li:nth-child(1){
+    margin: 0px 0px;
+}
+.other ul li a{
+    color: rgba(0, 0, 0, 0.843);
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+} 
+.other ul li a:hover{
+    text-decoration: none;
+    color: orange;
+}
+.other ul li:nth-child(5){
+    width: fit-content;
+    padding: 0px 0px;
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0px 50px;
+    margin-right: 0px;
+    cursor: pointer;
+    transition:  background 0.3s linear;
+    
+}
+.other ul li:nth-child(6):hover{
+   background-color: darkorange;
+}
+.other ul li .chat{
+   color: white;
+   transition: color 0.3s ease-in-out;
+   font-weight: 500;
+}
+.other ul li:hover .chat{
+    color: black;
+    transition: 1s;
+}
+#scrollHeader ul li a{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+#scrollHeader ul li:hover a{
+    text-decoration: none;
+    color: black;
+}
+
+.contain .scroll-header {
+  background-color: rgb(7, 7, 70);
+  color: #333;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  padding: 20px 60px;
+  z-index: 50;
+  padding-bottom: 0px;
+}
+
+.scroll-header.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.about{
+    width: 100%;
+    height: 50vh;
+    margin-top: 100px;
+    background: linear-gradient(to top,rgba(0, 0, 0, 0.303) , rgba(0, 0, 0, 0.608)), url("build.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0px;
+}
+.about h1{
+    text-align: center;
+    color: white;
+}
+.count{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    padding: 10px 0px;
+    margin: 0px auto;
+}
+.count a{
+    text-align: center;
+    display: block;
+    font-size: 18px;
+    margin: 0px 10px;
+    color: orange;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.count a:hover{
+    color: orangered;
+}
+/* service section  */
+.service{
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    padding: 80px 80px;
+}
+.box{
+    width: 60%;
+    height: fit-content;
+    position: relative;
+}
+.box h1{
+    font-size:8.5rem;
+    letter-spacing: 4px;
+    position: relative;
+    height: fit-content;
+    color: transparent;
+    -webkit-text-stroke: 1px #7e7272;
+    background-repeat: repeat-x;
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    z-index: 0;
+    margin-bottom: 0px;
+}
+.box p{
+    position: absolute;
+    color: rgba(1, 1, 33, 0.955);
+    font-size:3.5rem;
+    font-weight: bold;
+    top: 50%;
+}
+.our-service{
+    width: 100%;
+    height: fit-content;
+    padding: 40px 0px;
+    /* background-color: red; */
+    overflow: hidden;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.one:hover i{
+    background-color: orange;
+}
+.our-service .one{
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid orange;
+}
+.media{
+    width: 100%;
+    height: 40vh;
+    background-image: url(service1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    filter: brightness(1.2) saturate(1.2) contrast(1.1) blur(0px);
+    transition: all 1s ease-in-out;
+}
+.one:hover .media{
+    transform: scale(1.09, 1.09);
+}
+
+#two{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(service2.webp);
+}
+#th3{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(service3.webp);  
+}
+#th4{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(servicess4.png.webp);
+}
+#th5{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(servicess5.png.webp);
+}
+
+#th6{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(servicess6.png.webp);
+}
+.text-init{
+    width: 100%;
+    height: fit-content;
+    padding: 40px 40px;
+    padding-bottom: 5px;
+}
+.text-init a{
+    color: rgb(7, 7, 70);
+    font-weight: bold;
+    line-height: 20px;
+    transition: color 0.5s ease-in-out;
+    font-size: 25px;
+    text-decoration: none;
+}
+.text-init a:hover{
+    color: darkorange;
+    cursor: pointer;
+}
+.rows{
+    width: 100%;
+    height: fit-content;
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+}
+.rows a, .rows i{
+    margin: 0px 10px;
+    display: block;
+}
+.rows a{
+    color: rgb(7, 7, 70);
+    font-size: 17px;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+ 
+.rows i{
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    font-size: 18px;
+}
+/* service section  */
+/* footer begins here */
+/* footer  */
+footer{
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(7, 4, 4, 0.957);
+    padding: 100px 80px;
+    padding-bottom: 50px;
+}
+.wrap{
+    width: 100%;
+    height:fit-content;
+    display: flex;
+}
+.foot1, .foot2{
+    width: 50%;
+    height: fit-content;
+    display: flex;
+}
+.foot2{
+    background-color: transparent;
+}
+.inside, .inside2{
+    width: 65%;
+    height: fit-content;
+    padding: 0px 30px;
+    padding-left: 0px;
+}
+.inside2{
+    width: 35%;
+    padding: 0px 10px;
+    background-color: transparent;
+}
+.inside2 p{
+    font-size: 24px;
+    color: white;
+    margin-bottom: 38px;
+    font-weight: bold;
+    margin-top: 38px;
+}
+.inside .imgs{
+    width: 50%;
+    height: 10vh;
+    background-image: url(logo-white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 25px;
+}
+.inside p{
+    font-size: 13px;
+    font-weight: lighter;
+    color: ghostwhite;
+}
+footer a{
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    color: #7e7272;
+    text-decoration: none;
+    transition: transform 0.4s ease-in-out;
+    margin: 15px 0px;
+}
+footer a:hover{
+    color: orangered;
+    text-decoration: none;
+    transform: translateX(10px);
+}
+.inside3{
+    width: 60%;
+    height: fit-content;
+    padding: 15px 10px;
+    padding-bottom: 0px;
+}
+.inside4{
+    width: 40%;
+    height: 40vh;
+    padding: 15px 10px;
+    padding-bottom: 0px;
+}
+.inner-div{
+    width: 100%;
+    height: 40vh;
+    background-image: url(map-footer.png.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.inside3 p:nth-child(1){
+    font-size: 24px;
+    color: white;
+    margin-bottom: 38px;
+    font-weight: bold;
+    margin-top: 23px;
+}
+
+.foot1, .foot2{
+    width: 100%;
+}
+.last-text i{
+    color :gold;
+}
+.last-text{
+    font-size: 14px;
+    padding-top: 50px;
+}
+
+#btn4{
+    width: fit-content;
+    display: grid;
+    justify-self: end;
+}
+ .menu-ul{
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  z-index: 100;
+  padding: 40px 60px;
+  top: 80px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0px;
+  background-color: orange;
+  list-style: none;
+}
+.menu-ul li{
+  cursor: pointer;
+  margin: 20px 0px;
+}
+.menu-ul li:nth-child(1){
+    margin-top: 0px;
+}
+
+.menu-ul li a{
+  font-size: 20px;
+  display: block;
+  font-weight: 600;
+  color: white;
+  transition: all 1s ease;
+  text-decoration: none;
+}
+#oner li a:hover{
+  transform: translateX(10px);
+}
+#navs{
+  font-size: 35px;
+  color: orange;
+  transition: color 0.5s ease-in-out;
+}
+#navs:hover{
+  color: orangered;
+}
+
+/* footer ends  here */
+
+/* media queries  */
+@media (max-width:1100px) {
+    #contain header{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #contain .homepic{
+        width: 20%;
+        padding: 0px 110px;
+    }
+    #contain .other{
+        padding: 0px 0px;
+        width: 120%;
+    }
+    #contain .other ul li{
+        margin: 0px 0px;
+    }
+    .about{
+        padding: 120px 0px;
+    }
+    .service .our-service{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    footer .wrap{
+        display: block;
+    }
+    .inns2{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+ }
+@media (min-width:991px){
+    #btn4, #oner{
+        display: none;
+    }
+}
+@media (max-width:990px){
+  .other{
+      display: none;
+       
+  }
+  .contain #scrollHeader{
+      display: block;
+      padding: 15px 0px;
+  }
+  .contain #mainHeader{
+    padding: 15px 40px;
+  }
+  #btn4{
+    margin-right: 20px;
+  }
+  .contain #scrollHeader .homepic{
+      width: 50%;
+      padding: 0px 0px;
+      margin: 0px auto;
+      height: 5vh;
+  }
+  .contain #mainHeader .homepic{
+       width: 25%;
+       height: 5vh;
+      padding: 0px 0px;
+  }
+  #myDiv{
+      width: 6%;
+  }
+  .about{
+    margin-top: 70px;
+  }
+  .service{
+    padding: 120px 60px;
+    padding-bottom: 80px;
+  }
+  footer{
+    padding: 120px 60px;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width:850px){
+    .service .our-service{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .box h1{
+        font-size: 6.5rem;
+    }
+    .contain #mainHeader .homepic{
+        width: 30%;
+        margin-left: 0px;
+    }
+    .menu-ul{
+        width: 80%;
+    }
+}
+@media (max-width:768px) {
+    .menu-ul{
+        width: 100%;
+    }
+    footer .inside4{
+        height: fit-content;
+        padding-bottom: 0px;
+    }
+    .contain #mainHeader .homepic{
+        width: fit-content;
+        padding: 0px 110px;
+    }
+    .wrap .foot1{
+        display: block;
+    }
+    .inside, .inside2{
+        width: 100%;
+    }
+    .wrap .foot2{
+        display: block;
+    }
+    .inside3, .inside4{
+        width: 100%;
+    }
+    #myDiv{
+        width: 10%;
+    }
+    .box p{
+        font-size: 45px;
+    }
+}
+
+@media (max-width:650px) {
+    .about{
+        padding: 100px 0px;
+        padding-bottom: 100px;
+        height: 30vh;
+    }
+    .box h1{
+        font-size: 4.6rem;
+    }
+    .box p{
+        font-size: 35px;
+    }
+}
+
+@media (max-width:540px) {
+    .about{
+        padding-bottom: 170px;
+    }
+    footer{
+        padding-bottom: 30px;
+    }
+    .last-text{
+        width: 100%;
+    }
+    .box h1{
+        font-size: 4rem;
+        margin-left: 0px;
+        left: 0px;
+    }
+    .box p{
+        font-size: 32px;
+    }
+}
+@media (max-width:490px){
+    .service{
+        padding: 80px 20px;
+    }
+    .contain #mainHeader{
+        padding: 10px 20px;
+    }
+    .contain #mainHeader .homepic{
+        width: 50%;
+        padding: 0px 0px;
+        place-self: left;
+    }
+       .box h1{
+        font-size: 3rem;
+        margin-left: 0px;
+        left: 0px;
+    }
+    .box p{
+        font-size: 25px;
+    }
+    .menu-ul{
+        padding: 40px 40px;
+    }
+    footer{
+        padding: 80px 20px;
+        padding-bottom: 20px;
+    }
+    footer .wrap .inside{
+        padding: 0px 0px;
+    }
+    #myDiv{
+        width: 12%;
+    }
+    #oner{
+        top: 70px;
+    }
+    #btn4{
+        margin-right: 0px;
+    }
+}
+@media (max-width:430px){
+    .contain #mainHeader .homepic{
+        background-size: contain;
+    }
+    .contain #scrollHeader .homepic{
+        background-size: contain;
+    }
+}
+@media (max-width: 390px) {
+    #oner{
+        padding: 40px 25px;
+    }
+    .text-init{
+        padding: 50px 20px;
+        padding-bottom: 20px;
+    }
+    footer .wrap .foot1 .inside p{
+        padding-right: 0px;
+        margin-right: 0px;
+    }
+    footer{
+        height: auto;
+        padding-bottom: 13px;
+    }
+}
+@media (max-width: 320px){
+    .text-init{
+        padding: 50px 10px;
+        padding-bottom: 20px;
+    }
+    .text-init a{
+        padding-right: 0px;
+        font-size: 22px;
+    }
+    #myDiv{
+        width: 15%;
+    }
+}
+
+#oner li:nth-child(5){
+    width: fit-content;
+    padding: 0px 0px;
+    background-color:rgb(7, 7, 70);
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 0px 0px;
+    margin-right: 0px;
+    cursor: pointer;
+    transition:  background 0.3s linear;
+    
+}
+#oner li:nth-child(5):hover{
+   background-color: darkorange;
+}
+#oner li .chat{
+   color: white;
+   transition: color 0.3s ease-in-out;
+   font-weight: 500;
+}
+#oner li:hover .chat{
+    color: black;
+    transition: 1s;
+}
+/* media queries  */

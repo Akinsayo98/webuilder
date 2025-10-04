@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="..//bootfiles/bootstrap.css">
+    <link rel="stylesheet" href="..//fontawesome-free-6.4.0-web/css/all.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .parent{
+            width: 100%;
+            padding: 15px 0px;
+            height: fit-content;
+            background-color: blue;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .parent h1{
+            padding-left: 70px;
+        }
+        .wrap ul{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-right: 80px;
+        } 
+        h1{
+            color: white;
+        }
+        ul li{
+            padding: 10px 10px;
+            margin: 0px 10px;
+            cursor: pointer;
+        }
+        ul li a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: block;
+            transition: color 0.3s ease-in-out;
+        }
+        ul li a:hover{
+            color: black;
+        }
+        .uls li a{ 
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h1>Logo</h1>
+        <div class="wrap d-sm-none d-none d-lg-flex ">
+            <ul class="first-ul">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a>
+                </li>
+                <li><a href="#service">Services</a>
+                
+                </li>
+            </ul>
+        </div>
+        <a href="#one" class="btn btn-success d-block d-lg-none mr-4 " data-toggle="collapse">
+            <i class="fa fa-navicon" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div>
+        <ul class="uls  w-75 bg-dark collapse d-lg-none" id="one">
+            <li><a href="" class="text-light">Home</a></li>
+            <li><a href="" class="text-light">About</a></li>
+            <li><a href="" class="text-light">Service</a></li> 
+            <li><a href="" class="text-light">Contact</a></li>
+        </ul>
+    </div>
+
+        
+
+    <script src="..//bootfiles/jquery-slim.min.js"></script>
+    <script src="..//bootfiles/popper.min.js"></script>
+    <script src="..//bootfiles/bootstrap.js"></script>
+</body>
+</html>

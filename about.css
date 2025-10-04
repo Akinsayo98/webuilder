@@ -1,0 +1,1270 @@
+body {
+    /* font-family: 'Dangmen', sans-serif; */
+    /* font-family: 'Allura', cursive; */
+  /* font-family: 'Quicksand', sans-serif; */
+  /* font-family: 'Pacifico', cursive; */
+    /* font-family: 'Pacify', sans-serif; */
+    font-family: 'Bauhaus 93', sans-serif;
+    user-select: none;
+}
+/* @font-face {
+  font-family: 'Qwergi';
+  src: url('fonts/Qwergi-Font/qwergi-regular.otf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+} */
+
+.contain{
+    width: 100%;
+    height: auto;
+}
+
+.homepic{
+    width: 20%;
+    height: 100px;
+    background-image: url("logo2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#scrollHeader .homepic{
+    width: 20%;
+    height: 100px;
+    background-image: url("logo-white.png");
+    background-repeat: no-repeat;
+    background-position: center center 
+}
+.contain header {
+  width: 100%;
+  height: fit-content;
+  padding: 0px 60px;
+  padding-bottom: 0px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+.other{
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 0px;
+}
+.other ul{
+    width: fit-content;
+    margin: 0;
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+.other ul li{
+    padding: 0px 20px;
+    margin: 0px 0px;
+    border: transparent;
+}
+.other ul li:nth-child(1){
+    margin: 0px 0px;
+}
+.other ul li a{
+    color: rgba(0, 0, 0, 0.843);
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+} 
+.other ul li a:hover{
+    text-decoration: none;
+    color: orange;
+}
+.other ul li:nth-child(5){
+    width: fit-content;
+    padding: 0px 0px;
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 0px 50px;
+    margin-right: 0px;
+    cursor: pointer;
+    transition:  background 0.3s linear;
+    
+}
+.other ul li:nth-child(5):hover{
+   background-color: darkorange;
+}
+.other ul li .chat{
+   color: white;
+   transition: color 0.3s ease-in-out;
+   font-weight: 500;
+}
+.other ul li:hover .chat{
+    color: black;
+    transition: 1s;
+}
+#scrollHeader ul li a{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+#scrollHeader ul li:hover a{
+    text-decoration: none;
+    color: orangered;
+}
+#scrollHeader ul li:hover .chat{
+    color: black;
+    transition: 1s;
+}
+
+.contain .scroll-header {
+  background-color: rgb(7, 7, 70);
+  color: #333;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  padding: 20px 60px;
+  z-index: 50;
+  padding-bottom: 0px;
+}
+
+.scroll-header.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.contain{
+    padding-bottom: 100px;
+}
+/* about us */
+
+.found{
+    width: 100%;
+    padding: 50px 80px;
+    padding-top: 200px;
+    height: 120vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.408), rgba(0, 0, 0, 0.596)), url(alone.jpg);
+    /* background-image: url(alone.jpg); */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.found h1{
+    font-size:8.5rem;
+    letter-spacing: 4px;
+    position: relative;
+    height: fit-content;
+    color: transparent;
+    -webkit-text-stroke: 1px orange;
+    /* background: linear-gradient(to top, orange 50%, transparent 40%); */
+    background-repeat: repeat-x;
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+    z-index: 0;
+    margin-bottom: 0px;
+}
+.found p{
+    font-size: 30px;
+    margin-top: -110px;
+    margin-bottom: 0px;
+    text-align: center;
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 1px orange;
+    background: linear-gradient(to top, white 50%, transparent 40%);
+    background-repeat: repeat-x;
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: waveMotion 1s ease-in-out infinite alternate;    margin-top: -30px;
+}
+
+@keyframes waveMotion {
+  0% {
+    background-position: 0% 45%;
+  }
+  100% {
+    background-position: 0% 35%;
+  }
+}
+/* about us ends here  */
+
+
+/* company us ends here  */
+
+.company{
+    width: 100%;
+    height: fit-content;
+    /* background-color: rgba(5, 5, 69, 0.955); */
+    padding: 120px 80px;
+    display: flex;
+}
+.company .one{
+    width: 50%;
+    height: fit-content;
+    background-color: white;
+    padding: 0px 150px;
+    padding-left: 0px;
+}
+.company #two{
+    width: 50%;
+    height: 70vh;
+    background-color: transparent;
+    background-image: url(colleagues.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: color-burn;
+}
+.company p{
+    font-weight: 100;
+    font-size: light;
+    font-size: 15px;
+    margin: 0px 0px;
+    margin-bottom: 20px;
+}
+/* company us ends here  */
+
+/* carousel style  */
+/* carousel styling  */
+#four{
+    width: 100%;
+    height: fit-content;
+    background-color:rgb(7, 7, 70);
+    padding: 60px 80px;
+    position: relative;
+}
+#four h1{
+    font-size:8.5rem;
+    /*  */
+    letter-spacing: 4px;
+    position: relative;
+    height: fit-content;
+    color: transparent;
+    -webkit-text-stroke: 1px #7e7272;
+    /* background: linear-gradient(to top, orange 50%, transparent 40%); */
+    background-repeat: repeat-x;
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    z-index: 0;
+}
+.cp{
+    font-size: 65px;
+    color: white;
+    letter-spacing: -2px;
+    position: absolute;
+    top: 60px;
+    left: -10px;
+    margin-left: 0px;
+    /*  */
+    font-weight: bolder;
+}
+.cort{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    margin-bottom: 100px;
+}
+#four #item{
+    width: 100%;
+    height: 300px;
+    padding: 20px 20px;
+}
+#four #caption{
+    margin: 20px 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    padding: 20px 90px;
+    position: static;
+    height: fit-content;
+}
+#four #caption p{
+    text-align: left;
+    position: static;
+    margin: 0px 0px;
+    font-size: 15px;
+}
+#four #prev1, #four #next{
+    /* background-color: red; */
+    padding: 10px 15px;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 85%;
+    z-index: 1000;
+    left: 70%;
+}
+ #four #next{
+    left: 75%;
+ }
+ #four .code{
+    font-size: 70px;
+    color: transparent;
+    -webkit-text-stroke: 1px orangered;
+ }
+ #four .para{
+    font-size: 14px;
+ }
+ .carr{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding: 50px 0px;
+    padding-bottom: 20px;
+    align-items: center;
+ }
+ .carr .marks{
+    width: 3px;
+    height: 50px;
+    background-color: orangered;
+    margin-right: 10px;
+ }
+ .doing p{
+    font-size: 14px;
+ }
+ .doing p:nth-child(2){
+    color: #7e7272;    
+ }
+/* carousel style ends here */
+
+.six{
+    width: 100%;
+    height: fit-content;
+    padding: 200px 80px;
+    position: relative;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.357);
+}
+.six h1{
+    font-size:8.5rem;
+    /*  */
+    letter-spacing: 4px;
+    position: relative;
+    height: fit-content;
+    color: transparent;
+    -webkit-text-stroke: 1px #7e7272;
+    /* background: linear-gradient(to top, orange 50%, transparent 40%); */
+    background-repeat: repeat-x;
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    z-index: 0;
+    margin-left: 40px;
+}
+.six .team{
+    font-size: 62px;
+    color: ghostwhite;
+    letter-spacing: -2px;
+    margin-bottom: 0px;
+    position: absolute;
+    top: 290px;
+    color: rgba(1, 1, 33, 0.955);
+    margin-left: 20px;
+    /* font-family:poppins; */
+    font-weight: bolder;
+}
+.workers{
+    width: 100%;
+    height: fit-content;
+    padding: 50px 0px;
+    display: grid;
+    perspective: 800px;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.works{
+
+    height: fit-content;
+}
+.works1{
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(1.1) saturate(1.1) contrast(1.1);
+    transition: transform 1s ease;
+    overflow: hidden;
+    position: relative;
+}
+.workers .works1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('man.webp');
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.4s ease;
+}
+
+.workers #works2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('man2.webp');
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.4s ease;
+}
+
+.workers #works3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('workers.jpg');
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.4s ease;
+}
+
+.works1:hover::before {
+    transform: scale(1.1);
+  }
+  .abt{
+    width: 100%;
+    height: fit-content;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+  }
+  .abt p{
+    margin-bottom: 0px;
+    color: orangered;
+    font-size: 16px;
+  }
+  .abt .no1{
+    width: 7%;
+    height: 2px;
+    margin: 0px 5px;
+    margin-left: 0px;
+    background-color: orangered;
+  }
+  .namez{
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 0px;
+    padding: 7px 0px;
+    color: rgba(1, 1, 33, 0.955);
+}
+  #works2{
+    background-image: url(man2.webp);
+  }
+/* six content styling  */
+
+
+/* blog style  */
+ .blog{
+    width: 100%;
+    height: fit-content;
+    padding: 80px 80px;
+    padding-bottom: 120px;
+    background-color: white;
+    position: relative;
+ }
+ .blog .mover{
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 80px;
+ }
+ .blog h1{
+    font-size:8.5rem;
+    /*  */
+    letter-spacing: 4px;
+    position: relative;
+    height: fit-content;
+    color: transparent;
+    -webkit-text-stroke: 1px #ddd;
+    /* background: linear-gradient(to top, orange 50%, transparent 40%); */
+    background-repeat: repeat-x;
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    z-index: 0;
+ }
+ .blog .news{
+    font-size: 70px;
+    color: rgba(1, 1, 33, 0.955);
+    letter-spacing: -2px;
+    position: absolute;
+    top: 130px;
+    /*  */
+    font-weight: bolder;
+ }
+ .blog .pixer{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+ }
+ .blog .pix{
+    /* width: 100%; */
+    height: fit-content;
+ }
+ .blog .pix-inn{
+    background-image: url(david_1.png.webp);
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+ }
+ .blog .pix-inn2{
+    background-image: url(david_2.png.webp);
+    background-size: cover;
+    width: 100%;
+    margin: 0px 0px;
+    height: 50vh;
+    background-repeat: no-repeat;
+ }
+ .blog .pix-box{
+    width:fit-content;
+    height: fit-content;
+    padding: 10px 30px;
+    background-color: orangered;
+ }
+ .pix-box p{
+    margin: 0px 0px;
+    text-align: center;
+ }
+ .pix-box p:nth-child(1){
+    color: white;
+    font-weight: 600;
+    font-size: 23px;
+ }
+ .pix-box p:nth-child(2){
+    color: ghostwhite;
+    font-size: 14px;
+    font-weight: lighter;
+ }
+ .pixer .foot{
+    width: 100%;
+    height: fit-content;
+    padding: 50px 40px;
+    background-color:rgb(7, 7, 70);
+    display: block;
+    padding-right: 0px;
+    padding-bottom: 20px;
+ }
+.foot-div{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+ }
+ .foot-div .pin{
+    width: 2px;
+    height: 30px;
+    margin-right: 15px;
+    background-color: #ddd;
+ }
+ .foot-div p{
+    font-weight: light;
+    font-size: 14px;
+    color: #7e7272;
+ }
+ .foot .print a{
+    color: white;
+    font-weight: bolder;
+    /* font-family: 'Times New Roman', Times, serif !important; */
+    /* font-family: 'poppins' !important; */
+    line-height: 40px;
+    display: block;
+    transition: color 0.4s ease-in-out;
+    margin-bottom: 20px;
+ }
+ .foot .print a:hover{
+    color: orangered;
+ }
+ .foot .print{
+    font-size: 18px;
+ }
+ .blog .more{
+    color: orangered;
+ }
+ .blog .more:hover{
+    color: orangered;
+    text-decoration: none;
+ }
+ .blog .more span{
+    display: block;
+    width: 16%;
+    height: 3px;
+    background-color: orangered;
+    display: none;
+    animation: grow 1s ease-in-out;
+ }
+ .blog .more:hover span{
+    display: block;
+    animation: grow 1s ease-in-out;
+ }
+/* carousel styling ends here  */
+
+ @keyframes grow {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 16%;
+    }
+ }
+ 
+/* blog style ends here  */
+/* footer  */
+footer{
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(7, 4, 4, 0.957);
+    padding: 100px 80px;
+    padding-bottom: 50px;
+}
+.wrap{
+    width: 100%;
+    height:fit-content;
+    display: flex;
+}
+.foot1, .foot2{
+    width: 50%;
+    height: fit-content;
+    display: flex;
+}
+.foot2{
+    background-color: transparent;
+}
+.inside, .inside2{
+    width: 65%;
+    height: fit-content;
+    padding: 0px 30px;
+    padding-left: 0px;
+}
+.inside2{
+    width: 35%;
+    padding: 0px 10px;
+    background-color: transparent;
+}
+.inside2 p{
+    font-size: 24px;
+    color: white;
+    margin-bottom: 38px;
+    font-weight: bold;
+    margin-top: 38px;
+}
+.inside .imgs{
+    width: 50%;
+    height: 10vh;
+    background-image: url(logo-white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 25px;
+}
+.inside p{
+    font-size: 13px;
+    font-weight: lighter;
+    color: ghostwhite;
+}
+footer a{
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    color: #7e7272;
+    text-decoration: none;
+    transition: transform 0.4s ease-in-out;
+    margin: 15px 0px;
+}
+footer a:hover{
+    color: orangered;
+    text-decoration: none;
+    transform: translateX(10px);
+}
+.inside3{
+    width: 60%;
+    height: fit-content;
+    padding: 15px 10px;
+    padding-bottom: 0px;
+}
+.inside4{
+    width: 40%;
+    height: 40vh;
+    padding: 15px 10px;
+    padding-bottom: 0px;
+}
+.inner-div{
+    width: 100%;
+    height: 40vh;
+    background-image: url(map-footer.png.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.inside3 p:nth-child(1){
+    font-size: 24px;
+    color: white;
+    margin-bottom: 38px;
+    font-weight: bold;
+    margin-top: 23px;
+}
+
+.foot1, .foot2{
+    width: 100%;
+}
+.last-text i{
+    color :gold;
+}
+.last-text{
+    font-size: 14px;
+    padding-top: 50px;
+}
+ .fix{
+    width: 4%;
+    height:fit-content;
+    background-color:orange;
+    padding: 15px 0px;
+    position: fixed;
+    z-index: 10000;
+    right: 5%;
+    bottom: 0px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.055);
+    transition: all 0.3s ease-in-out;
+ }
+  .fix:hover{
+     background-color: darkorange;
+ }
+  .fix p{
+     margin-bottom: 0px;
+     text-align: center;
+     color: white;
+     transition: color 0.3s ease-in-out;
+ }
+  .fix:hover p{
+       color: black;
+ }
+  body{
+       position: relative;
+ }
+ #btn4{
+    width: fit-content;
+    display: grid;
+    justify-self: end;
+}
+ .menu-ul{
+  width: 70%;
+  height: fit-content;
+  position: absolute;
+  z-index: 100;
+  padding: 20px 80px;
+  top: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  /* margin-top: 50px; */
+  margin-bottom: 0px;
+  background-color: orange;
+  list-style: none;
+  border-bottom-right-radius: 10px;
+}
+.menu-ul li{
+  cursor: pointer;
+  margin: 20px 0px;
+}
+.menu-ul li a{
+  font-size: 20px;
+  display: block;
+  font-weight: 600;
+  color: white;
+  transition: all 1s ease;
+  text-decoration: none;
+}
+#oner li a:hover{
+  transform: translateX(10px);
+}
+#navs{
+  font-size: 35px;
+  color: orange;
+  transition: color 0.5s ease-in-out;
+}
+#navs:hover{
+  color: orangered;
+}
+
+ @media (max-width:1100px) {
+    #contain header{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #contain .homepic{
+        width: 20%;
+        padding: 0px 110px;
+    }
+    #contain .other{
+        padding: 0px 0px;
+        width: 120%;
+    }
+    #contain .other ul li{
+        margin: 0px 0px;
+    }
+ }
+ @media (min-width:991px) {
+    #btn4, .menu-ul{
+        display: none;
+    }
+ }
+ @media (max-width:990px) {
+    .contain .other{
+        display: none;
+    }
+    .contain{
+        padding-bottom: 0px;
+    }
+    #contain .homepic{
+        height: 7vh;
+    }
+    #contain #scrollHeader{
+        padding: 0px 40px;
+        display: block;
+    }
+    #contain #scrollHeader .homepic{
+        margin: 0px auto;
+        width: fit-content;
+    }
+    #found{
+        padding-bottom: 0px;
+        height: 70vh;
+        margin-top: 0px;
+    }
+    #found section{
+        padding-bottom: 0px;
+    }
+    #myDiv{
+        width: 6%;
+    }
+    .company{
+        display: block;
+    }
+    .company .one{
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .one p{
+        font-size: 20px;
+    }
+    .company #two{
+        width: 100%;
+    }
+    #four h1{
+        font-size: 6rem;
+    }
+    #four .cort p{
+        margin-left: 10px;
+        font-size: 55px;
+    }
+    .six h1{
+        font-size: 6rem;
+    }
+    .six .team{
+        top: 250px;
+        margin-left: 40px;
+    }
+    .six .workers{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .workers .works:nth-child(3){
+        grid-column: span 2;
+    }
+    #oner{
+        padding-top: 50px;
+    }
+    .mover h1{
+        font-size: 6rem;
+    }
+    .mover .news{
+        font-size: 50px;
+        margin-left: 20px;
+    }
+    footer .wrap{
+        display: block;
+    }
+    .inside4{
+        height: fit-content;
+    }
+    .inns2{
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+ }
+
+ @media (min-width:801px) {
+    #found .new-p{
+        display: none;
+    }
+ }
+ @media (max-width:800px) {
+    .menu-ul{
+        width: 100%;
+    }
+    .blog .pixer{
+        overflow: hidden;
+        display: block;
+    }
+    .pixer .pix{
+        margin: 40px 0px;
+        transition: all 1s ease-in-out;
+    }
+    .pix:hover{
+        transform: scale(1.05, 1.05);
+        transform-origin: center;
+    }
+     .mover h1{
+        font-size: 5rem;
+    }
+    .mover .news{
+        font-size: 45px;
+        margin-left: 10px;
+    }
+    .six h1{
+        font-size: 5rem;
+    }
+    .six .team{
+        top: 250px;
+        font-size: 45px;
+        margin-left: 40px;
+    }
+    #four .cort h1{
+        font-size: 5rem;
+    }
+    #four .cort p{
+        top: 43px;
+        margin-left: 10px;
+        font-size: 45px;
+    }
+    #four #caption{
+        padding: 50px 30px;
+    }
+    .six .workers{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .workers .works:nth-child(3){
+        grid-column: span 1;
+    }
+    #found{
+        padding: 80px 60px;
+        padding-top: 200px;
+    }
+    #found section{
+        width: 100%;
+        margin: 0px 0px;
+        padding: 0px 10px;
+    }
+    #found h1{
+        font-size: 5.5rem;
+    }
+    #found p{
+        font-size: 30px;
+        padding-top: 15px;
+    }
+    #found .pps{
+        display: none;
+    }
+ }
+ @media (max-width:768px) {
+    #myDiv{
+        width: 8%;
+    }
+    #contain #mainHeader{
+        padding: 10px 30px;
+    }
+    #contain #mainHeader .homepic{
+        padding: 0px 0px;
+        width: 100%;
+        background-size: contain;
+        place-self: left;
+    }
+ }
+ @media (max-width:600px) {
+    
+    #oner{
+        padding: 50px 40px;
+    }
+    #found .new-p{
+        font-size: 38px;
+    }
+    .company{
+        padding: 80px 20px;
+    }
+    #four .cort h1{
+        font-size: 3.5rem;
+    }
+    #four .cort p{
+        font-size: 35px;
+        top: 36px;
+    }
+    #four{
+        padding: 80px 20px;
+    }
+    #four #caption{
+        width: 100%;
+    }
+    .six{
+        padding: 100px 20px;
+    }
+    .six h1{
+        font-size: 3.5rem;
+        margin-left: 0px;
+    }
+    .six .team{
+        top: 130px;
+        margin-left:6px;
+        font-size: 35px;
+    }
+    footer{
+        padding: 100px 20px;
+    }
+    .blog{
+        padding: 100px 20px;
+    }
+    .blog h1{
+        font-size: 3.5rem;
+    }
+    .blog .news{
+        font-size: 35px;
+    }
+    .blog .foot .print{
+        font-size: 18px;
+    }
+ }
+
+ @media (max-width:550px) {
+    #found section h1{
+        font-size: 3.5rem;
+    }
+    #found .new-p{
+        font-size: 32px;
+    }
+    .company .one p{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    footer .wrap{
+        padding-bottom: 0px;
+        display: block;
+    }
+    footer .foot1, footer .foot2{
+        display: block;
+    }
+    .foot1 .inside, .foot1 .inside2{
+        width: 100%;
+    }
+    .foot2 .inside3, .foot2 .inside4{
+        width: 100%;
+    }
+    .inside3 p, .inside3 a{
+        font-size: 20px;
+    }
+    footer{
+        padding-bottom: 20px;
+    }
+    .inns2 a{
+        font-size: 20px;
+    }
+    #myDiv{
+        width: 10%;
+    }
+    footer .wrap .foot1 .inside{
+        padding-right: 0px;
+    }
+ }
+ @media (max-width:490px){
+    #found .new-p{
+        font-size: 25px;
+    }
+    .company #two{
+        height: 65vh;
+    }
+    #four #caption{
+        padding: 50px 0px;
+    }
+    #four #item{
+        width: 100%;
+        padding: 0px 0px;
+    }
+    .blog .foot{
+        padding: 40px 20px;
+    }
+    .foot .print a{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    .pix .pix-inn{
+        height: 40vh;
+        background-position: center;
+    }
+    .pix .pix-inn2{
+        background-position: left;
+        height: 40vh;
+    }
+ }
+ @media (max-width:430px){
+    .company #two{
+        height: 55vh;
+    }
+ }
+  @media (max-width:400px){
+    .company #two{
+        height: 55vh;
+    }
+    #found{
+        height: 50vh;
+    }
+   
+    footer .wrap{
+        padding: 20px 0px;
+    }
+    footer .wrap .foot1{
+        width: 100%;
+        padding: 0px 0px;
+    }
+  
+    #found h1{
+        font-size: 2.8rem;
+    }
+    #found .new-p{
+        font-size: 22px;
+    }
+      .company #two{
+        height: 45vh;
+    }
+    #four .cort h1{
+        font-size: 2.8rem;
+    }
+    #four .cort .cp{
+        font-size: 30px;
+        top: 25px;
+    }
+    .six h1{
+        font-size: 2.8rem;
+    }
+    .six .team{
+        font-size: 30px;
+        top: 120px;
+        margin-left: 0px;
+    }
+    .blog h1{
+        font-size: 2.8rem;
+    }
+    .blog .news{
+        font-size: 30px;
+        top: 120px;
+        margin-left: 0px;
+    }
+    #myDiv{
+        width: 12%;
+    }
+    .workers .works1{
+        height: 50vh;
+    }
+    footer{
+        padding-bottom: 15px;
+    }
+ }
+ @media (max-width:390px){
+    #found{
+        height: 60vh;
+    }
+    .company .one p{
+        font-size: 19px;
+        font-weight: lighter !important;
+    }
+    #found section h1{
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    #found section .new-p{
+        font-size: 20px;
+        line-height: 35px;
+    }
+    #four .cort h1{
+        font-size: 2.3rem;
+    }
+    #four .cort .cp{
+        font-size: 25px;
+        letter-spacing: 0.2px;
+    }
+    .foot .print a{
+        font-size: 17px;
+    }
+    .inns2 a{
+        font-size: 15px;
+    }
+    .inside3 p, .inside3 a{
+        font-size: 17px;
+    }
+    .blog .news{
+        top: 135px;
+    }
+    #myDiv{
+        width: 13%;
+    }
+ }
+ @media (max-width:345px) {
+    #found section h1{
+        font-size: 2rem;
+    }
+    #found section .new-p{
+        font-size: 15px;
+    }
+    #found{
+        height: 40vh;
+        padding-bottom: 20px;
+    }
+    .company #two{
+        height: 35vh;
+    }
+ }
+ #myDiv:hover{
+    background-color: orangered;
+ }
+ #oner li:nth-child(5){
+    width: fit-content;
+    padding: 0px 0px;
+    background-color:rgb(7, 7, 70);
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 0px 0px;
+    margin-right: 0px;
+    cursor: pointer;
+    transition:  background 0.3s linear;
+    
+}
+#oner li:nth-child(5):hover{
+   background-color: darkorange;
+}
+#oner li .chat{
+   color: white;
+   transition: color 0.3s ease-in-out;
+   font-weight: 500;
+}
+#oner li:hover .chat{
+    color: black;
+    transition: 1s;
+}

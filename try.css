@@ -1,0 +1,619 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bauhaus 93', sans-serif;
+    user-select: none;
+}
+
+/* @font-face {
+    font-family: 'Qwergi' !important;
+  src: url('fonts/Qwergi-Font/qwergi-regular.otf') format('truetype') !important;
+  font-weight: 400;
+  font-style: italic;
+} */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white; /* Blinking cursor */
+  width: 0;
+  margin: 80px auto;
+  margin-bottom: 0px;
+  animation: typing 3s steps(8, end) forwards, blink 0.7s infinite;
+  font-size: 3rem;
+  transition: 1s;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 8ch; } /* 12 characters in "Construction" */
+}
+@keyframes blink {
+   0%, 100% { border-color: transparent; }
+   50% { border-color: white; }
+}
+
+
+.contain{
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.homepic{
+    width: 20%;
+    height: 100px;
+    background-image: url("logo2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#scrollHeader .homepic{
+    width: 20%;
+    height: 100px;
+    background-image: url("logo-white.png");
+    background-repeat: no-repeat;
+    background-position: center center 
+}
+.contain header {
+  width: 100%;
+  height: fit-content;
+  padding: 0px 60px;
+  padding-bottom: 0px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 10000 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+.other{
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 0px;
+}
+.other ul{
+    width: fit-content;
+    margin: 0;
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+.other ul li{
+    padding: 0px 20px;
+    margin: 0px 0px;
+    border: transparent;
+}
+.other ul li:nth-child(1){
+    margin: 0px 0px;
+}
+.other ul li a{
+    color: rgba(0, 0, 0, 0.843);
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+} 
+.other ul li a:hover{
+    text-decoration: none;
+    color: orange;
+}   
+.other ul li:nth-child(5){
+    width: fit-content;
+    padding: 0px 0px;
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 0px 50px;
+    margin-right: 0px;
+    cursor: pointer;
+    transition:  background 0.3s linear;
+    
+}
+.other ul li:nth-child(5):hover{
+   background-color: darkorange;
+}
+.other ul li .chat{
+   color: white;
+   transition: color 0.3s ease-in-out;
+   font-weight: 500;
+}
+.other ul li:hover .chat{
+    color: black;
+    transition: 1s;
+}
+#scrollHeader ul li a{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+#scrollHeader ul li:hover a{
+    text-decoration: none;
+    color: black;
+}
+
+.contain .scroll-header {
+  background-color: rgb(7, 7, 70);
+  color: #333;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  padding: 20px 60px;
+  z-index: 50;
+  padding-bottom: 0px;
+}
+
+.scroll-header.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.about{
+    width: 100%;
+    height: 50vh;
+    margin-top: 100px;
+    background: linear-gradient(to top,rgba(0, 0, 0, 0.303) , rgba(0, 0, 0, 0.608)), url("build.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0px;
+}
+.about h1{
+    text-align: center !important;
+    color: white;
+}
+.count{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    padding: 10px 0px;
+    margin: 0px auto;
+}
+.count a{
+    text-align: center;
+    display: block;
+    font-size: 18px;
+    margin: 0px 10px;
+    color: orange;
+}
+
+/* fourth styling  */
+
+.fourth{
+    width: 100%;
+    height: fit-content;
+    background-color: whitesmoke;
+    padding: 100px 80px;
+    padding-bottom: 120px;
+}
+.cov{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cov h1{
+    font-size: 60px;
+    /* font-family: Anton !important; */
+    /* font-family: 'Times New Roman', Times, serif !important; */
+    font-weight: bold;
+}
+.packs{
+    width: fit-content;
+    padding: 0px 0px;
+    height: fit-content;
+    display: grid;
+    gap: 25px;
+    margin-right: 50px;
+    grid-template-columns: repeat(5, auto);
+}
+.packs button{
+    margin-top: 40px;
+    display: block;
+    font-weight: lighter;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.packs button:nth-child(1){
+    color: orange;
+}
+.galleries{
+    width: 100%;
+    height: fit-content;
+    padding: 60px 0px;
+    padding-bottom: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.img-cover{
+    overflow: hidden;
+    /* width: 50%; */
+    height: fit-content;
+}
+#img1{
+    width: 100%;
+    height: 70vh;
+    background-image: url(proj5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 0;
+}
+.img2{
+    transition: all 0.5s ease-in-out;
+}
+.img2:hover{
+    transform: scale(1.05, 1.05);
+}
+.foot{
+    width: 100%;
+    height: fit-content;
+    padding: 30px 20px;
+    background-color:#dddddd5f;
+    transition:  background 0.3s ease-in-out;
+    display: flex;
+    position: relative;
+}
+.img-cover:hover .foot{
+    background-color: orange;
+}
+
+
+.foot p{
+    margin-bottom: 0px;
+    font-size: 22px;
+    padding-right: 100px;
+    line-height: 20px;
+}
+.span{
+    width: fit-content;
+    right: 50px;
+    top: -10px;
+    position: absolute;
+    height: fit-content;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.span i:hover{
+    background-color: darkorange;
+}
+.img-cover:hover .foot .span{
+    opacity: 1;
+}
+.span i{
+    display: block;
+    z-index: 1000 !important;
+    width: fit-content;
+    padding: 8px 10px;
+    background-color: orangered;
+    color: white;
+    transition: background 0.4s ease-in-out;
+}
+.foot a{
+    text-decoration: none;
+    color: rgba(1, 1, 33, 0.955);
+    transition: color 0.3s ease-in-out;
+}
+.img-cover:hover .foot a{
+    color: white;
+}
+.foot a:hover{
+    text-decoration: none;
+    color: rgba(1, 1, 33, 0.955);
+}
+.butt a{
+    text-align: center;
+}
+
+#img2{
+   width: 100%;
+   height: 70vh;
+   /* background: linear-gradient(rgba(0, 0, 255, 0.324), rgba(0, 0, 0, 0.62)), url(project2.webp); */
+   background-image: url(proj3.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-blend-mode:darken;
+   /* background-position: center center; */
+   /* filter: brightness(1.3) contrast(1.2) saturate(1.3); */
+   z-index: 0;
+}
+#img3{
+   width: 100%;
+   background-image: url(proj6.jpg);
+   height: 70vh;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   z-index: 0;
+}
+#img4{
+   width: 100%;
+   background-image: url(chemical.jpg);
+   height: 70vh;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   z-index: 0;
+}
+#img5{
+   width: 100%;
+   background-image: url(chemical4.jpg);
+   height: 70vh;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   z-index: 0;
+}
+#img6{
+   width: 100%;
+   background-image: url(chemical3.jpg);
+   height: 70vh;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   z-index: 0;
+}
+
+.galleries .img-cover {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+/* fourth styling ends here */
+/* footer  */
+footer{
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(7, 4, 4, 0.957);
+    padding: 100px 80px;
+    padding-bottom: 50px;
+}
+.wrap{
+    width: 100%;
+    height:fit-content;
+    display: flex;
+}
+.foot1, .foot2{
+    width: 50%;
+    height: fit-content;
+    display: flex;
+}
+.foot2{
+    background-color: transparent;
+}
+.inside, .inside2{
+    width: 65%;
+    height: fit-content;
+    padding: 0px 30px;
+    padding-left: 0px;
+}
+.inside2{
+    width: 35%;
+    padding: 0px 10px;
+    background-color: transparent;
+}
+.inside2 p{
+    font-size: 24px;
+    color: white;
+    margin-bottom: 38px;
+    font-weight: bold;
+    margin-top: 38px;
+}
+.inside .imgs{
+    width: 50%;
+    height: 10vh;
+    background-image: url(logo-white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 25px;
+}
+.inside p{
+    font-size: 13px;
+    font-weight: lighter;
+    color: ghostwhite;
+}
+footer a{
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    color: #7e7272;
+    text-decoration: none;
+    transition: transform 0.4s ease-in-out;
+    margin: 15px 0px;
+}
+footer a:hover{
+    color: orangered;
+    text-decoration: none;
+    transform: translateX(10px);
+}
+.inside3{
+    width: 60%;
+    height: fit-content;
+    padding: 15px 10px;
+    padding-bottom: 0px;
+}
+.inside4{
+    width: 40%;
+    height: 40vh;
+    padding: 15px 10px;
+    padding-bottom: 0px;
+}
+.inner-div{
+    width: 100%;
+    height: 40vh;
+    background-image: url(map-footer.png.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.inside3 p:nth-child(1){
+    font-size: 24px;
+    color: white;
+    margin-bottom: 38px;
+    font-weight: bold;
+    margin-top: 23px;
+}
+
+.foot1, .foot2{
+    width: 100%;
+}
+.last-text i{
+    color :gold;
+}
+.last-text{
+    font-size: 14px;
+    padding-top: 50px;
+}
+.fix{
+  width: 4%;
+  height:fit-content;
+  background-color:orange;
+  padding: 15px 0px;
+  position: fixed;
+  z-index: 10000;
+  right: 5%;
+  bottom: 0px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.055);
+  transition: all 0.3s ease-in-out;
+}
+.fix:hover{
+  background-color: darkorange;
+}
+.fix p{
+  margin-bottom: 0px;
+  text-align: center;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+.fix:hover p{
+  color: black;
+}
+body{
+  position: relative;
+}
+#btn4{
+    width: fit-content;
+    display: grid;
+    justify-self: end;
+}
+ .menu-ul{
+  width: 70%;
+  height: fit-content;
+  position: absolute;
+  z-index: 100;
+  padding: 20px 60px;
+  top: 100px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0px;
+  background-color: orange;
+  list-style: none;
+  border-bottom-right-radius: 10px;
+}
+.menu-ul li{
+  cursor: pointer;
+  margin: 20px 0px;
+}
+.menu-ul li a{
+  font-size: 20px;
+  display: block;
+  font-weight: 600;
+  color: white;
+  transition: all 1s ease;
+  text-decoration: none;
+}
+#oner li a:hover{
+  transform: translateX(10px);
+}
+#navs{
+  font-size: 35px;
+  color: orange;
+  transition: color 0.5s ease-in-out;
+}
+#navs:hover{
+  color: orangered;
+}
+      /* media queries  */
+
+      @media (max-width:1100px){
+        .contain #mainHeader, .contain #scrollHeader{
+            width: 100%;
+            height: fit-content;
+            display: grid;
+            padding: 0px 40px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+         #mainHeader .homepic, #scrollHeader .homepic{
+            width: fit-content;
+            padding: 0px 110px;
+         }
+         #mainHeader .other, #scrollHeader .other{
+            width: fit-content;
+            padding: 0px 0px;
+         }
+         #mainHeader .other ul li, #scrollHeader .other ul li{
+            margin: 0px 0px;
+        }
+        .other ul li:nth-child(5){
+            margin-right: 0px;
+        }
+        #fourth{
+            padding: 100px 40px;
+        }
+        #fourth .galleries{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        footer{
+            padding: 100px 40px;
+            padding-bottom: 20px;
+        }
+        footer .wrap{
+            display: block;
+        }
+        .inns2{
+            width: 100%;
+            height: fit-content;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width:991px){
+        #btn4, #oner{
+            display: none;
+        }
+      }
+      @media (max-width:990px){
+        .other{
+            display: none;
+        }
+        .contain #scrollHeader{
+            display: block;
+        }
+        .contain #scrollHeader .homepic{
+            width: 50%;
+            padding: 0px 0px;
+            margin: 0px auto;
+        }
+      }
+      @media (max-width:800px) {
+        #fourth{
+            background-color: red !important;
+        }
+        #fourth .img2{
+            height: 50vh !important;
+        }
+      }
+      /* media queries  */

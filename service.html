@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeBuilder / Service</title>
+    <link rel="stylesheet" href="bootfiles/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="service.css">
+    <style>
+   
+    .letter {
+       display: inline-block;
+       transform: translateY(-120vh); /* start far above */
+       animation: fall 1.2s ease-out forwards;
+    }
+    .title{
+      color: #fff;
+      font-size: clamp(2rem, 6vw, 6rem);
+      letter-spacing: .05em;
+      margin-bottom: 0px;
+    }
+    @keyframes fall {
+    to {
+      transform: translateY(0); /* land in place */
+    }
+  }
+    .falling {
+    animation-name: fall;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }
+  .fix{
+        width: 4%;
+        height:fit-content;
+        background-color:orange;
+        padding: 15px 0px;
+        position: fixed;
+        z-index: 10000;
+        right: 5%; 
+        bottom: 0px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        border-radius: 100%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.055);
+        transition: all 0.3s ease-in-out;
+      }
+      .fix:hover{
+        background-color: darkorange;
+      }
+      .fix p{
+        margin-bottom: 0px;
+        text-align: center;
+        color: white;
+        transition: color 0.3s ease-in-out;
+      }
+      .fix:hover p{
+        color: black;
+      }
+       .contain #mainHeader{
+          background-color: white;
+        }
+    </style>
+</head>
+<body>
+      <div class="contain">
+         <header class="main-header" id="mainHeader">
+            <div class="homepic"></div>
+            <div class="other">
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="project.html">Projects</a></li>
+                  <li><a href="service.html">Services</a></li>
+                 <li><a class="chat" href="https://wa.me/+2348134891064?text=Hello,%20*WeBuilder*%20I%20am%20coming%20from%20your%20website,%20I%20Need%20Your%20Service.%20">Let's Chat</a></li>
+              </ul>
+            </div>
+              <button class="btn btn-dark" id="btn4" data-target="#oner" data-toggle="collapse">
+                <i class="fa fa-navicon" id="navs" aria-hidden="true"></i>
+            </button>
+        </header>
+
+        <header class="scroll-header" id="scrollHeader">
+          <div class="homepic"></div>
+            <div class="other">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="service.html">Services</a></li>
+              <li><a class="chat" href="https://wa.me/+2348134891064?text=Hello,%20*WeBuilder*%20I%20am%20coming%20from%20your%20website,%20I%20Need%20Your%20Service.%20">Let's Chat</a></li>
+            </ul>
+          </div>
+      </header>
+
+  </div>
+  <!-- collapse  -->
+      <div>
+          <ul class="menu-ul collapse" id="oner">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a class="chat" href="https://wa.me/+2348134891064?text=Hello,%20*WeBuilder*%20I%20am%20coming%20from%20your%20website,%20I%20Need%20Your%20Service.%20">Let's Chat</a></li>
+          </ul>
+      </div>
+
+<!-- collapse  -->
+  <div class="about">
+      <h1 class="title" id="title">SERVICE</h1>
+      <div class="count">
+        <a href="index.html">Home</a>
+        <span style="color: orange;">/</span>
+        <a href="service.html">Service</a>
+      </div>
+  </div>
+  <div class="service">
+    <div class="box">
+      <h1>SERVICES</h1>
+      <p>OUR SERVICES</p>
+    </div>
+    <div class="our-service">
+      <div class="one">
+        <div class="media"></div>
+        <div class="text-init">
+          <p><a href="details.html">Engineering techniques & implementation</a></p>
+        </div>
+          <div class="rows">
+            <a href="details.html">Read More <span></span></a>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </div>
+      </div>
+      <div class="one">
+        <div class="media" id="two"></div>
+         <div class="text-init">
+          <p><a href="details.html">Engineering techniques & implementation</a></p>
+        </div>
+          <div class="rows">
+            <a href="details.html">Read More <span></span></a>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </div>
+      </div>
+      <div class="one">
+        <div class="media"id="th3"></div>
+         <div class="text-init">
+          <p><a href="details.html">Engineering techniques & implementation</a></p>
+        </div>
+          <div class="rows">
+            <a href="details.html">Read More <span></span></a>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </div>
+      </div>
+      <div class="one">
+        <div class="media"id="th4"></div>
+         <div class="text-init">
+          <p><a href="details.html">Engineering techniques & implementation</a></p>
+        </div>
+          <div class="rows">
+            <a href="details.html">Read More <span></span></a>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </div>
+      </div>
+      <div class="one" >
+        <div class="media"id="th5"></div>
+         <div class="text-init">
+          <p><a href="details.html">Engineering techniques & implementation</a></p>
+        </div>
+          <div class="rows">
+            <a href="details.html">Read More <span></span></a>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </div>
+      </div>
+      <div class="one">
+        <div class="media"id="th3"></div>
+         <div class="text-init">
+          <p><a href="details.html">Engineering techniques & implementation</a></p>
+        </div>
+          <div class="rows">
+            <a href="details.html">Read More<span></span></a>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer   -->
+         <footer class="">
+            <div class="wrap">
+               <div class="foot1">
+                  <div class="inside">
+                      <div class="imgs"></div>
+                      <p>If you want a construction company you can truly trust, we the one for you. We combined top-notch craftsmanship with genuine care for your needs.</p>
+                  </div>
+                  <div class="inside2">
+                      <p>Quick Links</p>
+                      <div class="inns2">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="project.html">Projects</a>
+                        <a href="details.html">Details</a>
+                        <!-- <a href="details.html">Details</a>     -->
+                      </div>
+                  </div>
+               </div>
+               <div class="foot2">
+                  <div class="inside3">
+                    <p>Contact</p>
+                    <p>198 West 21th Street, Suite 721 New</p>
+                    <p>York,NY 10010</p>
+                    <a href="#">Phone: +95 (0) 123 456 789</a>
+                    <a href="#">Cell: +95 (0) 123 456 789</a>
+                  </div>
+                  <div class="inside4">
+                    <div class="inner-div"></div>
+                  </div>
+               </div>
+            </div>
+             <p class="last-text text-muted">Copyright ©2025 All rights reserved | This template is made with <i class="far fa-heart" aria-hidden="true"></i> by Akinsayo Bright</p> 
+         </footer>
+<!-- footer ends here  -->
+  <div class="fix" id="myDiv">
+    <p><i class="fa fa-arrow-up" aria-hidden="true" id="backHome"></i></a></p>
+  </div>
+ 
+<script>
+  const title = document.getElementById('title');
+  const text = title.textContent.trim();
+  title.textContent = '';
+
+  // wrap each letter
+  for (let i = 0; i < text.length; i++) {
+    const span = document.createElement('span');
+    span.className = 'letter';
+    span.textContent = text[i];
+    span.style.animationDelay = `${i * 0.2}s`; // staggered fall
+    title.appendChild(span);
+  }
+
+
+  // disappearing header 
+
+const mainHeader = document.getElementById('mainHeader');
+const scrollHeader = document.getElementById('scrollHeader');
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > 100) {
+    // Scrolling down
+    if (currentScroll > lastScrollY) {
+      mainHeader.style.transform = 'translateY(-100%)';
+      scrollHeader.classList.add('active');
+    } 
+    // Scrolling up
+    else {
+      if (currentScroll <= 150) {
+        mainHeader.style.transform = 'translateY(0)';
+        scrollHeader.classList.remove('active');
+      }
+    }
+  } else {
+    // Near top
+    mainHeader.style.transform = 'translateY(0)';
+    scrollHeader.classList.remove('active');
+  }
+
+  lastScrollY = currentScroll;
+});
+
+// disappearing header
+ document.getElementById("myDiv").addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+}); 
+</script>
+<script src="bootfiles/jquery-slim.min.js"></script>
+ <script src="bootfiles/popper.min.js"></script>
+ <script src="bootfiles/bootstrap.js"></script>
+</body>
+</html>

@@ -20,7 +20,15 @@
     height: fit-content;
     overflow: hidden;
 }
-
+ .hidden, .hidden1{
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s ease-in-out, transform 1.3s ease-out;
+        }
+ .show, .show1{
+            opacity: 1;
+            transform: translateY(0);
+        }
 .homepic{
     width: 20%;
     height: 100px;
@@ -120,7 +128,7 @@
     color: orangered;
 }
 #scrollHeader ul li .hom{
-  color: orangered;
+  /* color: orangered; */
 }
 
 #scrollHeader ul li:hover .chat{
@@ -673,6 +681,18 @@ footer a:hover{
   }
 
 }
+ .hidden2{
+            opacity: 0;
+            transform: translateX(-200px);
+            transition: opacity 0.7s ease-in-out, transform 1s ease-out;
+        }
+          .show2{
+          opacity: 1;
+          transform: translateX(0);
+        }
+        #oner{
+          z-index: 100;
+        }
 /* media queries  */
 </style>
 </head>
@@ -717,27 +737,27 @@ footer a:hover{
       </div>
       
       <div class="about">
-        <p>Engineering techniques & implementation</p>
+        <p class="hidden1">Engineering techniques & implementation</p>
       </div>
       <!-- content  -->
        <div class="content">
-          <div class="image"></div>
-          <p>
+          <div class="image hidden1"></div>
+          <p class="hidden">
             Collaboration between engineers, architects, and builders ensures that every element fits together with purpose. 
             Construction is not just about building walls;
              it is about creating environments where people can live, work, and thrive.
           </p>
-           <p>
+           <p class="hidden">
             Collaboration between engineers, architects, and builders ensures that every element fits together with purpose.
             Construction is not just about building walls; it is about creating environments where people can live, work, and thrive.
           </p>
-          <h1>How can we help?</h1>
-          <p>
+          <h1 class="hidden2">How can we help?</h1>
+          <p class="hidden">
             We help by providing complete construction services — from design and planning to building and finishing.
              Our team ensures quality,
              safety, and efficiency, delivering strong and lasting structures tailored to your needs.
           </p>
-          <p>
+          <p class="hidden">
             We can help by turning your ideas into strong, reliable structures. From the earliest planning stage to the 
             final finishing touches, we provide complete construction solutions tailored to your needs.
           </p>
@@ -745,41 +765,41 @@ footer a:hover{
       <!-- content  -->
 
       <!-- footer   -->
-         <footer class="">
+         <footer class="" style="overflow: hidden;">
             <div class="wrap">
                <div class="foot1">
                   <div class="inside">
-                      <div class="imgs"></div>
-                      <p>If you want a construction company you can truly trust, we the one for you. We combined top-notch craftsmanship with genuine care for your needs.</p>
+                      <div class="imgs hidden1"></div>
+                      <p class="hidden2">If you want a construction company you can truly trust, we the one for you. We combined top-notch craftsmanship with genuine care for your needs.</p>
                   </div>
                   <div class="inside2">
-                      <p>Quick Links</p>
+                      <p class="hidden">Quick Links</p>
                        <div class="inns2">
-                           <a href="index.html">Home</a>
-                           <a href="about.html">About</a>
-                           <a href="project.html">Projects</a>
-                           <a href="service.html">Services</a>
+                           <a class="hidden" href="index.html">Home</a>
+                           <a class="hidden" href="about.html">About</a>
+                           <a class="hidden" href="project.html">Projects</a>
+                           <a class="hidden" href="service.html">Services</a>
                        </div>
                   </div>
                </div>
                <div class="foot2">
                   <div class="inside3">
-                    <p>Contact</p>
-                    <p>198 West 21th Street, Suite 721 New</p>
-                    <p>York,NY 10010</p>
-                    <a href="#">Phone: +95 (0) 123 456 789</a>
-                    <a href="#">Cell: +95 (0) 123 456 789</a>
+                    <p class="hidden">Contact</p>
+                    <p class="hidden">198 West 21th Street, Suite 721 New</p>
+                    <p class="hidden">York,NY 10010</p>
+                    <a class="hidden" href="#">Phone: +95 (0) 123 456 789</a>
+                    <a class="hidden" href="#">Cell: +95 (0) 123 456 789</a>
                   </div>
                   <div class="inside4">
-                    <div class="inner-div"></div>
+                    <div class="inner-div hidden"></div>
                   </div>
                </div>
             </div>
-             <p class="last-text text-muted">Copyright ©2025 All rights reserved | This template is made with 
+             <p class="last-text text-muted hidden2">Copyright ©2025 All rights reserved | This template is made with 
               <i class="far fa-heart heart" aria-hidden="true"></i> by Akinsayo Bright</p> 
          </footer>
 <!-- footer ends here  -->
-  <div class="fix" id="myDiv">
+  <div class="fix hidden" id="myDiv">
     <p><i class="fa fa-arrow-up" aria-hidden="true" id="backHome"></i></a></p>
   </div>
     </div>
@@ -840,6 +860,68 @@ window.addEventListener('scroll', () => {
  document.getElementById("myDiv").addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
 }); 
+
+
+document.addEventListener("DOMContentLoaded", function(){
+          const observer = new IntersectionObserver(
+              (entries, observer) =>{
+                  entries.forEach((entry) =>{
+                      if(entry.isIntersecting){
+                          entry.target.classList.add("show1");
+                          // observer.unobserve(entry.target);
+                      }
+                      else{
+                          entry.target.classList.remove("show1")
+                          // observer.unobserve(entry.target);
+                      }
+                  })
+              }, {threshold: 0.1}
+          );
+          document.querySelectorAll(".hidden1").forEach((element) =>{
+              observer.observe(element);
+          });
+      })
+
+      
+      document.addEventListener("DOMContentLoaded", function(){
+                const observer = new IntersectionObserver(
+                    (entries, observer) =>{
+                        entries.forEach((entry) =>{
+                            if(entry.isIntersecting){
+                                entry.target.classList.add("show");
+                                observer.unobserve(entry.target);
+                            }
+                            else{
+                                entry.target.classList.remove("show")
+                                // observer.unobserve(entry.target);
+                            }
+                        })
+                    }, {threshold: 0.2}
+                );
+                document.querySelectorAll(".hidden").forEach((element) =>{
+                    observer.observe(element);
+                });
+            });
+
+             document.addEventListener("DOMContentLoaded", function(){
+          const observer = new IntersectionObserver(
+              (entries, observer) =>{
+                  entries.forEach((entry) =>{
+                      if(entry.isIntersecting){
+                          entry.target.classList.add("show2");
+                          observer.unobserve(entry.target);
+                      }
+                      else{
+                          entry.target.classList.remove("show2");
+                      }
+                  })
+
+              }, {threshold: 0.2}
+          );
+          document.querySelectorAll(".hidden2").forEach((element) =>{
+              observer.observe(element);
+          });
+      });
     </script>
     <script src="bootfiles/jquery-slim.min.js"></script>
     <script src="bootfiles/popper.min.js"></script>

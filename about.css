@@ -1,9 +1,4 @@
 body {
-    /* font-family: 'Dangmen', sans-serif; */
-    /* font-family: 'Allura', cursive; */
-  /* font-family: 'Quicksand', sans-serif; */
-  /* font-family: 'Pacifico', cursive; */
-    /* font-family: 'Pacify', sans-serif; */
     font-family: 'Bauhaus 93', sans-serif;
     user-select: none;
 }
@@ -120,7 +115,7 @@ body {
     color: orangered;
 }
 #scrollHeader ul li:hover .chat{
-    color: black;
+    color: black !important;
     transition: 1s;
 }
 

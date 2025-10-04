@@ -5,16 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WeBuilder / About</title>
    <link rel="stylesheet" href="bootfiles/bootstrap.css">
-   <link rel="stylesheet" href="fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.css">
-   <link rel="stylesheet" href="fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/fontawesome.css">
+   <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
    <link rel="stylesheet" href="about.css">
    <link rel="icon" type="image/png" href="logo2.png">
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&display=swap"> -->
   <!-- <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet"> -->
    <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
   <!-- <link href="https://fonts.cdnfonts.com/css/pacify" rel="stylesheet"> -->
-   <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/bauhaus-93">
     <!-- <link href="https://fonts.cdnfonts.com/css/dangmen" rel="stylesheet"> -->
+     <style>
+        .hidden, .hidden1{
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s ease-in-out, transform 1.3s ease-out;
+        }
+        
+        .hidden2{
+            opacity: 0;
+            transform: translateX(-200px);
+            transition: opacity 1s ease-in-out, transform 1.3s ease-out;
+        }
+        .hidden3{
+            opacity: 0;
+            transform: translateX(200px);
+            transition: opacity 1s ease-in-out, transform 1.3s ease-out;
+        }
+        .show, .show1{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .show2, .show3{
+          opacity: 1;
+          transform: translateX(0);
+        }
+
+     </style>
 </head>
 <body>
     <div class="contain" id="contain">
@@ -62,34 +87,34 @@
     
     <div class="found" id="found">
         <section>
-            <h1>About Us</h1>
-            <p class="pps">We build with strength. We deliver with trust.</p>
-            <p class="new-p">We build with strength.</p>
-            <p class="new-p">We deliver with trust.</p>
+            <h1 class="hidden1">About Us</h1>
+            <p class="pps hidden1">We build with strength. We deliver with trust.</p>
+            <p class="new-p hidden1">We build with strength.</p>
+            <p class="new-p hidden1">We deliver with trust.</p>
       </section>
     </div>
-    <div class="company">
-        <div class="one">
+    <div class="company" style="overflow: hidden;">
+        <div class="one hidden1">
            <p>A proven constructor recognized for completing projects on time, within budget, 
             and to the highest standards of quality and safety.</p>
-           <p>
+           <p class="hidden">
               With years of hands-on experience and a track record of delivering outstanding projects, our lead constructor has built a reputation for excellence, reliability, 
               and innovation in the construction industry.
            </p>
-           <p>
+           <p class="hidden">
               We are a team of certified construction engineers delivering durable, innovative, and cost-effective building solutions.
               Our commitment is to transform your vision into reality with precision, safety, and excellence on every project.
            </p>
         </div>
-        <div class="one" id="two"></div>
+        <div class="one hidden3" id="two"></div>
     </div>
     
     <!--carousel  -->
      <!-- carousel footer  -->
        <div class="carousel slide" id="four" data-ride="carousel">
              <div class="cort">
-                <h1>FEEDBACK</h1>
-                <p class="cp">TESTIMONIAL</p>
+                <h1 class="hidden2">FEEDBACK</h1>
+                <p class="cp hidden1">TESTIMONIAL</p>
              </div>
             <ol class="carousel-indicators">
                 <li class="active" data-slide-to="0"></li>
@@ -175,11 +200,11 @@
 
             <!-- six contents  -->
      <div class="six">
-         <h1>EXPERTS</h1>
-         <p class="team">OUR TEAM</p>
+         <h1 class="hidden2">EXPERTS</h1>
+         <p class="team hidden1">OUR TEAM</p>
 
          <div class="workers">
-            <div class="works">
+            <div class="works hidden1">
                 <div class="works1"></div>
                 <div class="abt">
                     <div class="no1"></div>
@@ -187,7 +212,7 @@
                 </div>
                  <p class="namez">Ethan Welch</p>
             </div>
-            <div class="works">
+            <div class="works hidden1">
                 <div class="works1" id="works2"></div>
                     <div class="abt">
                        <div class="no1"></div>
@@ -195,7 +220,7 @@
                    </div>
                  <p class="namez">Wayne Brown</p>
             </div>
-            <div class="works">
+            <div class="works hidden1">
                 <div class="works1" id="works3"></div>
                     <div class="abt">
                        <div class="no1"></div>
@@ -208,13 +233,13 @@
     <!-- six contents  -->
   <!-- blog content here  -->
          <div class="blog">
-            <div class="mover">
-               <h1>OUR BLOG</h1>
-               <p class="news">LATEST NEWS</p>
+            <div class="mover ">
+               <h1 class="hidden2">OUR BLOG</h1>
+               <p class="news hidden1">LATEST NEWS</p>
             </div>
 
             <div class="pixer">
-              <div class="pix">
+              <div class="pix hidden1">
                   <div class="pix-inn">
                     <div class="pix-box">
                        <p>24</p>
@@ -223,27 +248,27 @@
                   </div>
                   <div class="foot">
                       <div class="foot-div">
-                         <div class="pin"></div>
-                         <p>Properties</p>
+                         <div class="pin hidden1"></div>
+                         <p class="hidden1">Properties</p>
                       </div>
-                      <p class="print"><a href="details.html">Footprints in Time is perfect House in Kurashiki &</a></p>
-                      <a href="details.html" class="more">Read More<span></span></a>
+                      <p class="print hidden1"><a href="details.html">Footprints in Time is perfect House in Kurashiki &</a></p>
+                      <a href="details.html" class="more hidden1">Read More<span></span></a>
                   </div>
               </div>
-              <div class="pix">
+              <div class="pix hidden1">
                  <div class="pix-inn2">
                     <div class="pix-box">
-                       <p>24</p>
-                       <p>Now</p>
+                       <p class="hidden1">24</p>
+                       <p class="hidden1">Now</p>
                    </div>
                   </div>
                   <div class="foot">
                       <div class="foot-div">
-                         <div class="pin"></div>
-                         <p>Properties</p>
+                         <div class="pin hidden1"></div>
+                         <p class="hidden1">Properties</p>
                       </div>
-                      <p class="print"><a href="details.html">Footprints in Time is perfect House in Kurashiki &</a></p>
-                      <a href="details.html" class="more">Read More<span></span></a>
+                      <p class="print hidden1"><a href="details.html">Footprints in Time is perfect House in Kurashiki &</a></p>
+                      <a href="details.html" class="more hidden1">Read More<span></span></a>
                   </div>
               </div>
             </div>
@@ -254,37 +279,37 @@
          <footer class="">
             <div class="wrap">
                <div class="foot1">
-                  <div class="inside">
+                  <div class="inside hidden1">
                       <div class="imgs"></div>
                       <p>If you want a construction company you can truly trust, we the one for you. We combined top-notch craftsmanship with genuine care for your needs.</p>
                   </div>
-                  <div class="inside2">
-                      <p>Quick Links</p>
+                  <div class="inside2 ">
+                      <p class="hidden1">Quick Links</p>
                         <div class="inns2">
-                          <a href="index.html">Home</a>
-                          <a href="project.html">Projects</a>
-                          <a href="service.html">Services</a>
-                          <a href="details.html">Details</a>
+                          <a class="hidden1"  href="index.html">Home</a>
+                          <a class="hidden1"  href="project.html">Projects</a>
+                          <a class="hidden1"  href="service.html">Services</a>
+                          <a class="hidden1"  href="details.html">Details</a>
                         </div>
                   </div>
                </div>
                <div class="foot2">
                   <div class="inside3">
-                    <p>Contact</p>
-                    <p>198 West 21th Street, Suite 721 New</p>
-                    <p>York,NY 10010</p>
-                    <a href="#">Phone: +95 (0) 123 456 789</a>
-                    <a href="#">Cell: +95 (0) 123 456 789</a>
+                    <p class="hidden1">Contact</p>
+                    <p class="hidden1">198 West 21th Street, Suite 721 New</p>
+                    <p class="hidden1">York,NY 10010</p>
+                    <a class="hidden1" href="#">Phone: +95 (0) 123 456 789</a>
+                    <a class="hidden1" href="#">Cell: +95 (0) 123 456 789</a>
                   </div>
-                  <div class="inside4">
+                  <div class="inside4 hidden1">
                     <div class="inner-div"></div>
                   </div>
                </div>
             </div>
-             <p class="last-text text-muted">Copyright ©2025 All rights reserved | This template is made with <i class="far fa-heart" aria-hidden="true"></i> by Akinsayo Bright</p> 
+             <p class="last-text text-muted hidden1">Copyright ©2025 All rights reserved | This template is made with <i class="far fa-heart" aria-hidden="true"></i> by Akinsayo Bright</p> 
          </footer>
 
-         <div class="fix" id="myDiv">
+         <div class="fix hidden1" id="myDiv">
               <p><i class="fa fa-arrow-up" aria-hidden="true" id="backHome"></i></a></p>
         </div>
 
@@ -292,6 +317,92 @@
   <script src="bootfiles/popper.min.js"></script>
   <script src="bootfiles/bootstrap.js"></script>
   <script src="about.js"></script>
+  <script>
+    // first two text 
+       // the first 3 rows 
+      document.addEventListener("DOMContentLoaded", function(){
+          const observer = new IntersectionObserver(
+              (entries, observer) =>{
+                  entries.forEach((entry) =>{
+                      if(entry.isIntersecting){
+                          entry.target.classList.add("show1");
+                          // observer.unobserve(entry.target);
+                      }
+                      else{
+                          entry.target.classList.remove("show1")
+                          // observer.unobserve(entry.target);
+                      }
+                  })
+              }, {threshold: 0.1}
+          );
+          document.querySelectorAll(".hidden1").forEach((element) =>{
+              observer.observe(element);
+          });
+      })
+      // first two text
+      // slide out left 
+      document.addEventListener("DOMContentLoaded", function(){
+                const observer = new IntersectionObserver(
+                    (entries, observer) =>{
+                        entries.forEach((entry) =>{
+                            if(entry.isIntersecting){
+                                entry.target.classList.add("show");
+                                observer.unobserve(entry.target);
+                            }
+                            else{
+                                entry.target.classList.remove("show")
+                                // observer.unobserve(entry.target);
+                            }
+                        })
+                    }, {threshold: 0.2}
+                );
+                document.querySelectorAll(".hidden").forEach((element) =>{
+                    observer.observe(element);
+                });
+            });
+
+            
+  document.addEventListener("DOMContentLoaded", function(){
+          const observer = new IntersectionObserver(
+              (entries, observer) =>{
+                  entries.forEach((entry) =>{
+                      if(entry.isIntersecting  && window.scrollY > 10){
+                          entry.target.classList.add("show3");
+                          observer.unobserve(entry.target);
+                      }
+                      else{
+                          entry.target.classList.remove("show3");
+                      }
+                  })
+
+              }, {threshold: 0.2}
+          );
+          document.querySelectorAll(".hidden3").forEach((element) =>{
+              observer.observe(element);
+          });
+      });
+
+       
+  document.addEventListener("DOMContentLoaded", function(){
+          const observer = new IntersectionObserver(
+              (entries, observer) =>{
+                  entries.forEach((entry) =>{
+                      if(entry.isIntersecting  && window.scrollY > 10){
+                          entry.target.classList.add("show2");
+                          observer.unobserve(entry.target);
+                      }
+                      else{
+                          entry.target.classList.remove("show2");
+                      }
+                  })
+
+              }, {threshold: 0.2}
+          );
+          document.querySelectorAll(".hidden2").forEach((element) =>{
+              observer.observe(element);
+          });
+      });
+  </script>
   </body>
 </html>
 

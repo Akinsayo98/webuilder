@@ -113,7 +113,6 @@
     margin-right: 0px;
     cursor: pointer;
     transition:  background 0.3s linear;
-    
 }
 .other ul li:nth-child(5):hover{
    background-color: darkorange;
@@ -137,6 +136,10 @@
 #scrollHeader ul li:hover a{
     text-decoration: none;
     color: orangered;
+}
+#scrollHeader ul li:hover .chat{
+    color: black;
+    transition: 1s;
 }
 
 .contain .scroll-header {

@@ -8,6 +8,32 @@
   <link rel="stylesheet" href="projet.css">
   <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
     <!-- <link href="https://fonts.cdnfonts.com/css/dangmen" rel="stylesheet"> -->
+     <style>
+      .hidden, .hidden1{
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s ease-in-out, transform 1.3s ease-out;
+        }
+        
+        .hidden2{
+            opacity: 0;
+            transform: translateX(-200px);
+            transition: opacity 0.7s ease-in-out, transform 1s ease-out;
+        }
+        .hidden3{
+            opacity: 0;
+            transform: translateX(200px);
+            transition: opacity 1s ease-in-out, transform 1.3s ease-out;
+        }
+        .show, .show1{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .show2, .show3{
+          opacity: 1;
+          transform: translateX(0);
+        }
+     </style>
 </head>
 <body>
   <div class="contain">
@@ -63,10 +89,10 @@
 
   
     <!-- fourth content  -->
-    <div class="fourth" id="fourth">
+    <div class="fourth overflow-hidden" id="fourth">
         <div class="cov">
-          <h1>OUR PROJECTS</h1>
-            <div class="packs">
+          <h1 class="hidden1">OUR PROJECTS</h1>
+            <div class="packs hidden3">
               <button>Show All</button>
               <button>Interior</button>
               <button>Recent</button>
@@ -76,21 +102,21 @@
         </div> 
       
         <div class="galleries" id="gallery">
-            <div class="img-cover">
+            <div class="img-cover hidden1">
                 <div class="img2" id="img1"></div>
                 <div class="foot">
                       <p><a href="details.html">Floride Chemicals Factory</a></p>
                     <div class="span"><a href="details.html"><i class="fa fa-plus" aria-hidden="true"></i></a></div>
                 </div>
             </div>
-            <div class="img-cover">
+            <div class="img-cover hidden1">
                 <div class="img2" id="img2"></div>
                 <div class="foot">
                       <p><a href="details.html">Floride Chemicals Factory</a></p>
                     <div class="span"><a href="details.html"><i class="fa fa-plus" aria-hidden="true"></i></a></div>
                 </div>
             </div>
-            <div class="img-cover">
+            <div class="img-cover hidden1">
                 <div class="img2" id="img3"></div>
                 <div class="foot">
                       <p><a href="details.html">Floride Chemicals Factory</a></p>
@@ -99,7 +125,7 @@
             </div>
 
             <!-- second rows  -->
-             <div class="img-cover">
+             <div class="img-cover hidden1">
                 <div class="img2" id="img4"></div>
                 <div class="foot">
                       <p><a href="details.html">Floride Chemicals Factory</a></p>
@@ -107,7 +133,7 @@
                 </div>
             </div>
 
-            <div class="img-cover">
+            <div class="img-cover hidden1">
                 <div class="img2" id="img5"></div>
                 <div class="foot">
                       <p><a href="details.html">Floride Chemicals Factory</a></p>
@@ -115,7 +141,7 @@
                 </div>
             </div>
 
-             <div class="img-cover">
+             <div class="img-cover hidden1">
                 <div class="img2" id="img6"></div>
                 <div class="foot">
                       <p><a href="details.html">Floride Chemicals Factory</a></p>
@@ -134,36 +160,36 @@
             <div class="wrap">
                <div class="foot1">
                   <div class="inside">
-                      <div class="imgs"></div>
-                      <p>If you want a construction company you can truly trust, we the one for you. We combined top-notch craftsmanship with genuine care for your needs.</p>
+                      <div class="imgs hidden1"></div>
+                      <p class="hidden1">If you want a construction company you can truly trust, we the one for you. We combined top-notch craftsmanship with genuine care for your needs.</p>
                   </div>
                   <div class="inside2">
-                      <p>Quick Links</p>
+                      <p class="hidden1">Quick Links</p>
                        <div class="inns2">
-                        <a href="index.html">Home</a>
-                        <a href="About.html">About</a>
-                        <a href="service.html">Services</a>
-                        <a href="details.html">Details</a>
+                        <a class="hidden1" href="index.html">Home</a>
+                        <a class="hidden1" href="About.html">About</a>
+                        <a class="hidden1" href="service.html">Services</a>
+                        <a class="hidden1" href="details.html">Details</a>
                        </div>
                   </div>
                </div>
                <div class="foot2">
                   <div class="inside3">
-                    <p>Contact</p>
-                    <p>198 West 21th Street, Suite 721 New</p>
-                    <p>York,NY 10010</p>
-                    <a href="#">Phone: +95 (0) 123 456 789</a>
-                    <a href="#">Cell: +95 (0) 123 456 789</a>
+                    <p class="hidden1">Contact</p>
+                    <p class="hidden1">198 West 21th Street, Suite 721 New</p>
+                    <p class="hidden1">York,NY 10010</p>
+                    <a class="hidden1" href="#">Phone: +95 (0) 123 456 789</a>
+                    <a class="hidden1" href="#">Cell: +95 (0) 123 456 789</a>
                   </div>
                   <div class="inside4">
-                    <div class="inner-div"></div>
+                    <div class="inner-div hidden1"></div>
                   </div>
                </div>
             </div>
-             <p class="last-text text-muted">Copyright ©2025 All rights reserved | This template is made with <i class="far fa-heart" aria-hidden="true"></i> by Akinsayo Bright</p> 
+             <p class="last-text text-muted hidden1">Copyright ©2025 All rights reserved | This template is made with <i class="far fa-heart" aria-hidden="true"></i> by Akinsayo Bright</p> 
          </footer>
 
-         <div class="fix" id="myDiv">
+         <div class="fix hidden1" id="myDiv">
               <p><i class="fa fa-arrow-up" aria-hidden="true" id="backHome"></i></a></p>
         </div>
 
@@ -263,6 +289,89 @@ buttons.forEach(btn => {
  document.getElementById("myDiv").addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+
+document.addEventListener("DOMContentLoaded", function(){
+          const observer = new IntersectionObserver(
+              (entries, observer) =>{
+                  entries.forEach((entry) =>{
+                      if(entry.isIntersecting){
+                          entry.target.classList.add("show1");
+                          // observer.unobserve(entry.target);
+                      }
+                      else{
+                          entry.target.classList.remove("show1")
+                          // observer.unobserve(entry.target);
+                      }
+                  })
+              }, {threshold: 0.1}
+          );
+          document.querySelectorAll(".hidden1").forEach((element) =>{
+              observer.observe(element);
+          });
+      })
+
+      document.addEventListener("DOMContentLoaded", function(){
+                const observer = new IntersectionObserver(
+                    (entries, observer) =>{
+                        entries.forEach((entry) =>{
+                            if(entry.isIntersecting){
+                                entry.target.classList.add("show");
+                                observer.unobserve(entry.target);
+                            }
+                            else{
+                                entry.target.classList.remove("show")
+                                // observer.unobserve(entry.target);
+                            }
+                        })
+                    }, {threshold: 0.2}
+                );
+                document.querySelectorAll(".hidden").forEach((element) =>{
+                    observer.observe(element);
+                });
+            });
+
+            
+  document.addEventListener("DOMContentLoaded", function(){
+          const observer = new IntersectionObserver(
+              (entries, observer) =>{
+                  entries.forEach((entry) =>{
+                      if(entry.isIntersecting  && window.scrollY < 100){
+                          entry.target.classList.add("show3");
+                          observer.unobserve(entry.target);
+                      }
+                      else{
+                          // entry.target.classList.remove("show3");
+                      }
+                  })
+
+              }, {threshold: 0.1}
+          );
+          document.querySelectorAll(".hidden3").forEach((element) =>{
+              observer.observe(element);
+          });
+      });
+
+       
+  document.addEventListener("DOMContentLoaded", function(){
+          const observer = new IntersectionObserver(
+              (entries, observer) =>{
+                  entries.forEach((entry) =>{
+                      if(entry.isIntersecting  && window.scrollY > 10){
+                          entry.target.classList.add("show2");
+                          observer.unobserve(entry.target);
+                      }
+                      else{
+                          entry.target.classList.remove("show2");
+                      }
+                  })
+
+              }, {threshold: 0.2}
+          );
+          document.querySelectorAll(".hidden2").forEach((element) =>{
+              observer.observe(element);
+          });
+      });
 </script>
  <script src="bootfiles/jquery-slim.min.js"></script>
  <script src="bootfiles/popper.min.js"></script>

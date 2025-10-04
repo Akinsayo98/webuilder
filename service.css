@@ -129,6 +129,10 @@
 }
 #scrollHeader ul li:hover a{
     text-decoration: none;
+    color: orangered;
+}
+#scrollHeader ul li:hover .chat{
+    text-decoration: none;
     color: black;
 }
 
@@ -457,6 +461,9 @@ footer a:hover{
 .menu-ul li:nth-child(1){
     margin-top: 0px;
 }
+#scrollHeader li a:hover{
+    color: orangered;
+}
 
 .menu-ul li a{
   font-size: 20px;
@@ -741,5 +748,8 @@ footer a:hover{
 #oner li:hover .chat{
     color: black;
     transition: 1s;
+}
+#myDiv:hover{
+    background-color: orangered;
 }
 /* media queries  */
